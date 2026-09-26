@@ -1,0 +1,21 @@
+{
+  "DisplayName": "Main",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_EnvironmentProd",
+      "DisplayName": "in_EnvironmentProd",
+      "Category": null,
+      "Tooltip": "Optional: If set to true, the process will use Config file path from Orchestrator asset, otherwise from Data folder.",
+      "Placeholder": "True",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}

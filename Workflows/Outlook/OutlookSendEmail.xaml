@@ -1,0 +1,1125 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="OutlookSendEmail" this:OutlookSendEmail.intSMTP_1_Exchange_2_Outlook_3="2" this:OutlookSendEmail.strEmailSubject="Test subject" this:OutlookSendEmail.strEmailBody="Hello,&lt;br&gt;&lt;br&gt;this is test E-mail.&lt;br&gt;&lt;br&gt;Robot" this:OutlookSendEmail.listAttachmentList="[Nothing]" this:OutlookSendEmail.boolIsBodyHTML="True" this:OutlookSendEmail.strEmailCredName_12="Robot1_OutlookCredentials" this:OutlookSendEmail.intEmailPort_1="587" this:OutlookSendEmail.strEmailDomain_2="domain_name" this:OutlookSendEmail.strEmailServer_12="https://outlook.domain_name.pl/EWS/Exchange.asmx" this:OutlookSendEmail.boolSaveCopyInSentItems_2="False" this:OutlookSendEmail.intSendEmailTOms="16000" this:OutlookSendEmail.intGetCredTOms="8000" this:OutlookSendEmail.tsDelAfterSend="00:00:03" this:OutlookSendEmail.intSendEmailRSNR="2" this:OutlookSendEmail.tsSendEmailRSTS="00:00:10" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:umae="clr-namespace:UiPath.Mail.Activities.Enums;assembly=UiPath.Mail.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.Mail.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="intSMTP_1_Exchange_2_Outlook_3" Type="InArgument(x:Int32)" />
+    <x:Property Name="strEmailTO" Type="InArgument(x:String)" />
+    <x:Property Name="strEmailCC" Type="InArgument(x:String)" />
+    <x:Property Name="strEmailSubject" Type="InArgument(x:String)" />
+    <x:Property Name="strEmailBody" Type="InArgument(x:String)" />
+    <x:Property Name="strAttachmentPath" Type="InArgument(x:String)" />
+    <x:Property Name="listAttachmentList" Type="InArgument(scg:List(x:String))" />
+    <x:Property Name="boolIsBodyHTML" Type="InArgument(x:Boolean)" />
+    <x:Property Name="strEmailCredName_12" Type="InArgument(x:String)" />
+    <x:Property Name="strEmailCredFolder_12" Type="InArgument(x:String)" />
+    <x:Property Name="intEmailPort_1" Type="InArgument(x:Int32)" />
+    <x:Property Name="strEmailDomain_2" Type="InArgument(x:String)" />
+    <x:Property Name="strEmailServer_12" Type="InArgument(x:String)" />
+    <x:Property Name="strEmailAccount_3" Type="InArgument(x:String)" />
+    <x:Property Name="strEmailDisplayName_12" Type="InArgument(x:String)" />
+    <x:Property Name="strEmailSendOnBehalf_123" Type="InArgument(x:String)" />
+    <x:Property sap2010:Annotation.AnnotationText="If set to true, strEmailSendOnBehalf_123 must be provided." Name="boolSaveCopyInSentItems_2" Type="InArgument(x:Boolean)" />
+    <x:Property Name="intSendEmailTOms" Type="InArgument(x:Int32)" />
+    <x:Property Name="intGetCredTOms" Type="InArgument(x:Int32)" />
+    <x:Property Name="tsDelAfterSend" Type="InArgument(x:TimeSpan)" />
+    <x:Property Name="intSendEmailRSNR" Type="InArgument(x:Int32)" />
+    <x:Property Name="tsSendEmailRSTS" Type="InArgument(x:TimeSpan)" />
+  </x:Members>
+  <this:OutlookSendEmail.strEmailCC>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" Value="" />
+    </InArgument>
+  </this:OutlookSendEmail.strEmailCC>
+  <this:OutlookSendEmail.strAttachmentPath>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" Value="" />
+    </InArgument>
+  </this:OutlookSendEmail.strAttachmentPath>
+  <this:OutlookSendEmail.strEmailAccount_3>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" Value="" />
+    </InArgument>
+  </this:OutlookSendEmail.strEmailAccount_3>
+  <this:OutlookSendEmail.strEmailDisplayName_12>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" Value="" />
+    </InArgument>
+  </this:OutlookSendEmail.strEmailDisplayName_12>
+  <this:OutlookSendEmail.strEmailSendOnBehalf_123>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" Value="" />
+    </InArgument>
+  </this:OutlookSendEmail.strEmailSendOnBehalf_123>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>OutlookSendEmail_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Enums</x:String>
+      <x:String>Microsoft.Exchange.WebServices.Data</x:String>
+      <x:String>UiPath.Mail.Exchange</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.Exchange.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>Microsoft.Exchange.WebServices</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Send E-mail with given details." DisplayName="OutlookSendEmail" sap:VirtualizedContainerService.HintSize="895,957" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="strLogin" />
+      <Variable x:TypeArguments="ss:SecureString" Name="sstrPass" />
+      <Variable x:TypeArguments="x:Int32" Name="intNoAttach_0_Path_1_List_2" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message - 98" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - Outlook Send Email&quot;]" />
+    <If sap2010:Annotation.AnnotationText="Read E-mail credentials?" Condition="[strEmailCredName_12 &lt;&gt; &quot;&quot;]" DisplayName="If - strEmailCredName_12 != &quot;&quot;" sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="If_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" DisplayName="Retry Scope - Get Credential - strEmailCredName_12" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="RetryScope_3" NumberOfRetries="[Int32.Parse(jsonConfig(&quot;RS&quot;)(&quot;OrchestratorGetSetActivities&quot;)(&quot;NR&quot;).ToString())]" RetryInterval="[TimeSpan.FromSeconds(Int32.Parse(jsonConfig(&quot;RS&quot;)(&quot;OrchestratorGetSetActivities&quot;)(&quot;TS&quot;).ToString()))]">
+          <ui:RetryScope.ActivityBody>
+            <ActivityAction>
+              <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,227" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:GetRobotCredential AssetName="[strEmailCredName_12]" CacheStrategy="None" DisplayName="Get Credential - strEmailCredName_12" FolderPath="[strEmailCredFolder_12]" sap:VirtualizedContainerService.HintSize="416,167" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[sstrPass]" TimeoutMS="[intGetCredTOms]" Username="[strLogin]" />
+              </Sequence>
+            </ActivityAction>
+          </ui:RetryScope.ActivityBody>
+          <ui:RetryScope.Condition>
+            <ActivityFunc x:TypeArguments="x:Boolean" />
+          </ui:RetryScope.Condition>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:RetryScope>
+      </If.Then>
+      <If.Else>
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <Sequence sap2010:Annotation.AnnotationText="Prepare variables." DisplayName="Set Vars" sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign DisplayName="Assign - strEmailTO" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[strEmailTO]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[strEmailTO.Replace(" ", "").Replace(",", ";").Replace(Environment.NewLine, "").TrimEnd(";"c)]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign DisplayName="Assign - strEmailCC" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[strEmailCC]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[If(Not string.IsNullOrEmpty(strEmailCC), strEmailCC.Replace(" ", "").Replace(",", ";").Replace(Environment.NewLine, "").TrimEnd(";"c), strEmailCC)]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <If sap2010:Annotation.AnnotationText="Is strAttachmentPath and listAttachmentList empty?" Condition="[string.IsNullOrEmpty(strAttachmentPath) AndAlso (listAttachmentList Is Nothing OrElse (listAttachmentList IsNot Nothing AndAlso listAttachmentList.Count = 0))]" DisplayName="If - No Attachments" sap:VirtualizedContainerService.HintSize="416,102" sap2010:WorkflowViewState.IdRef="If_2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Assign DisplayName="Assign - intNoAttach_0_Path_1_List_2 - 0" sap:VirtualizedContainerService.HintSize="450,143" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">[intNoAttach_0_Path_1_List_2]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">0</InArgument>
+            </Assign.Value>
+          </Assign>
+        </If.Then>
+        <If.Else>
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </If.Else>
+      </If>
+      <If sap2010:Annotation.AnnotationText="Is strAttachmentPath provided?" Condition="[Not string.IsNullOrEmpty(strAttachmentPath)]" DisplayName="If - strAttachmentPath" sap:VirtualizedContainerService.HintSize="416,88" sap2010:WorkflowViewState.IdRef="If_3">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Assign DisplayName="Assign - intNoAttach_0_Path_1_List_2 - 1" sap:VirtualizedContainerService.HintSize="450,143" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">[intNoAttach_0_Path_1_List_2]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">1</InArgument>
+            </Assign.Value>
+          </Assign>
+        </If.Then>
+        <If.Else>
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </If.Else>
+      </If>
+      <If sap2010:Annotation.AnnotationText="Is listAttachmentList provided?" Condition="[listAttachmentList IsNot Nothing AndAlso listAttachmentList.Count &gt; 0]" DisplayName="If - listAttachmentList" sap:VirtualizedContainerService.HintSize="416,88" sap2010:WorkflowViewState.IdRef="If_4">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Assign DisplayName="Assign - intNoAttach_0_Path_1_List_2 - 2" sap:VirtualizedContainerService.HintSize="450,143" sap2010:WorkflowViewState.IdRef="Assign_5">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:Int32">[intNoAttach_0_Path_1_List_2]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:Int32">2</InArgument>
+            </Assign.Value>
+          </Assign>
+        </If.Then>
+        <If.Else>
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </If.Else>
+      </If>
+      <If sap2010:Annotation.AnnotationText="Is strAttachmentPath and listAttachmentList providd?" Condition="[Not string.IsNullOrEmpty(strAttachmentPath) AndAlso (listAttachmentList IsNot Nothing AndAlso listAttachmentList.Count &gt; 0)]" DisplayName="If - strAttachmentPath And listAttachmentList" sap:VirtualizedContainerService.HintSize="416,93" sap2010:WorkflowViewState.IdRef="If_5">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Throw DisplayName="Throw - Email Attachments Overflow" Exception="[new BusinessRuleException(&quot;Too many attachment sources. Please provide: strAttachmentPath OR listAttachmentList.&quot;)]" sap:VirtualizedContainerService.HintSize="450,91" sap2010:WorkflowViewState.IdRef="Throw_1" />
+        </If.Then>
+        <If.Else>
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </If.Else>
+      </If>
+    </Sequence>
+    <ui:LogMessage DisplayName="Log Message - 99" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Using method: &quot; + &#xA;If(intSMTP_1_Exchange_2_Outlook_3 = 1, &#xA; &quot;SMTP&quot;, If(intSMTP_1_Exchange_2_Outlook_3 = 2, &#xA;  &quot;Exchange&quot;, &#xA;  &quot;Outlook Application&quot;)) + &#xA;&quot;, Attachments: &quot; + &#xA;If(intNoAttach_0_Path_1_List_2 = 0, &#xA; &quot;0&quot;, If(intNoAttach_0_Path_1_List_2 = 1, &#xA;  &quot;1&quot;, &#xA;  listAttachmentList.Count.ToString())) + &#xA;&quot;, E-mail sent to: &quot; + &#xA;If(String.IsNullOrEmpty(strEmailCC), &#xA; strEmailTO, &#xA; strEmailTO + &quot;, CC: &quot; + strEmailCC)]" />
+    <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" sap2010:Annotation.AnnotationText="Try to send E-mail to given recipients." DisplayName="Retry Scope - Switch - intSMTP_1_Exchange_2_OutlookApp_3" sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="[intSendEmailRSNR]" RetryInterval="[tsSendEmailRSTS]">
+      <ui:RetryScope.ActivityBody>
+        <ActivityAction>
+          <Switch x:TypeArguments="x:Int32" sap2010:Annotation.AnnotationText="Choose which method to use." DisplayName="Switch - intSMTP_1_Exchange_2_OutlookApp_3" Expression="[intSMTP_1_Exchange_2_Outlook_3]" sap:VirtualizedContainerService.HintSize="412,56" sap2010:WorkflowViewState.IdRef="Switch`1_5">
+            <Switch.Default>
+              <Throw DisplayName="Throw - Invalid Option" Exception="[new BusinessRuleException(&quot;Invalid option selected. Please choose between: 1, 2 or 3.&quot;)]" sap:VirtualizedContainerService.HintSize="434,91" sap2010:WorkflowViewState.IdRef="Throw_3" />
+            </Switch.Default>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Switch x:TypeArguments="x:Int32" x:Key="1" sap2010:Annotation.AnnotationText="Choose number of attachments." DisplayName="Switch&lt;Int32&gt; - intNoAttach_0_Path_1_List_2 - SMTP" Expression="[intNoAttach_0_Path_1_List_2]" sap:VirtualizedContainerService.HintSize="357,56" sap2010:WorkflowViewState.IdRef="Switch`1_6">
+              <Switch.Default>
+                <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </Switch.Default>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If x:Key="0" sap2010:Annotation.AnnotationText="Is E-mail Body in HTML?" Condition="[boolIsBodyHTML]" DisplayName="If - boolIsBodyHTML - SMTP - 0" sap:VirtualizedContainerService.HintSize="450,56" sap2010:WorkflowViewState.IdRef="If_23">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,430" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:SendMail Bcc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" UseOAuth="{x:Null}" Action="Forward" AttachmentInputMode="Existing" Body="[strEmailBody]" Cc="[strEmailCC]" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="Send SMTP Mail Message - HTML - 0" Email="[strLogin]" EnableSSL="True" From="[strEmailSendOnBehalf_123]" sap:VirtualizedContainerService.HintSize="416,370" sap2010:WorkflowViewState.IdRef="SendMail_19" IgnoreCRL="False" IsBodyHtml="True" Name="[strEmailDisplayName_12]" Port="[intEmailPort_1]" SecureConnection="Auto" SecurePassword="[sstrPass]" Server="[strEmailServer_12]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" UseISConnection="False" UseRichTextEditor="True">
+                      <ui:SendMail.AttachmentsBackup>
+                        <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
+                          <usau:BackupSlot.BackupValues>
+                            <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+                          </usau:BackupSlot.BackupValues>
+                        </usau:BackupSlot>
+                      </ui:SendMail.AttachmentsBackup>
+                      <ui:SendMail.ConnectionDetailsBackupSlot>
+                        <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="LegacyConfiguration">
+                          <usau:BackupSlot.BackupValues>
+                            <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+                          </usau:BackupSlot.BackupValues>
+                        </usau:BackupSlot>
+                      </ui:SendMail.ConnectionDetailsBackupSlot>
+                      <ui:SendMail.Files>
+                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                      </ui:SendMail.Files>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:SendMail>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,330" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:SendMail Bcc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" UseOAuth="{x:Null}" Action="Forward" AttachmentInputMode="Existing" Body="[strEmailBody]" Cc="[strEmailCC]" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="Send SMTP Mail Message - Not HTML - 0" Email="[strLogin]" EnableSSL="True" From="[strEmailSendOnBehalf_123]" sap:VirtualizedContainerService.HintSize="416,270" sap2010:WorkflowViewState.IdRef="SendMail_20" IgnoreCRL="False" IsBodyHtml="False" Name="[strEmailDisplayName_12]" Port="[intEmailPort_1]" SecureConnection="Auto" SecurePassword="[sstrPass]" Server="[strEmailServer_12]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" UseISConnection="False" UseRichTextEditor="True">
+                      <ui:SendMail.AttachmentsBackup>
+                        <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
+                          <usau:BackupSlot.BackupValues>
+                            <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+                          </usau:BackupSlot.BackupValues>
+                        </usau:BackupSlot>
+                      </ui:SendMail.AttachmentsBackup>
+                      <ui:SendMail.ConnectionDetailsBackupSlot>
+                        <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="LegacyConfiguration">
+                          <usau:BackupSlot.BackupValues>
+                            <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+                          </usau:BackupSlot.BackupValues>
+                        </usau:BackupSlot>
+                      </ui:SendMail.ConnectionDetailsBackupSlot>
+                      <ui:SendMail.Files>
+                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                      </ui:SendMail.Files>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:SendMail>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <If x:Key="1" sap2010:Annotation.AnnotationText="Is E-mail Body in HTML?" Condition="[boolIsBodyHTML]" DisplayName="If - boolIsBodyHTML - SMTP - 1" sap:VirtualizedContainerService.HintSize="450,56" sap2010:WorkflowViewState.IdRef="If_24">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,482" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:SendMail Bcc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" UseOAuth="{x:Null}" Action="Forward" AttachmentInputMode="FilePaths" Body="[strEmailBody]" Cc="[strEmailCC]" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="Send SMTP Mail Message - HTML - 1" Email="[strLogin]" EnableSSL="True" From="[strEmailSendOnBehalf_123]" sap:VirtualizedContainerService.HintSize="416,422" sap2010:WorkflowViewState.IdRef="SendMail_23" IgnoreCRL="False" IsBodyHtml="True" Name="[strEmailDisplayName_12]" Port="[intEmailPort_1]" SecureConnection="Auto" SecurePassword="[sstrPass]" Server="[strEmailServer_12]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" UseISConnection="False" UseRichTextEditor="True">
+                      <ui:SendMail.AttachmentsBackup>
+                        <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
+                          <usau:BackupSlot.BackupValues>
+                            <scg:List x:TypeArguments="x:Object" x:Key="FilePaths" Capacity="2">
+                              <x:Null />
+                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                <InArgument x:TypeArguments="x:String">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_549">strAttachmentPath</CSharpValue>
+                                </InArgument>
+                              </scg:List>
+                            </scg:List>
+                            <scg:List x:TypeArguments="x:Object" x:Key="Existing" Capacity="1">
+                              <x:Null />
+                            </scg:List>
+                            <scg:List x:TypeArguments="x:Object" x:Key="Builder" Capacity="1">
+                              <x:Null />
+                            </scg:List>
+                          </usau:BackupSlot.BackupValues>
+                        </usau:BackupSlot>
+                      </ui:SendMail.AttachmentsBackup>
+                      <ui:SendMail.ConnectionDetailsBackupSlot>
+                        <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="LegacyConfiguration">
+                          <usau:BackupSlot.BackupValues>
+                            <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+                          </usau:BackupSlot.BackupValues>
+                        </usau:BackupSlot>
+                      </ui:SendMail.ConnectionDetailsBackupSlot>
+                      <ui:SendMail.Files>
+                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                          <InArgument x:TypeArguments="x:String">[strAttachmentPath]</InArgument>
+                        </scg:List>
+                      </ui:SendMail.Files>
+                    </ui:SendMail>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,382" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:SendMail Bcc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" UseOAuth="{x:Null}" Action="Forward" AttachmentInputMode="FilePaths" Body="[strEmailBody]" Cc="[strEmailCC]" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="Send SMTP Mail Message - Not HTML - 1" Email="[strLogin]" EnableSSL="True" From="[strEmailSendOnBehalf_123]" sap:VirtualizedContainerService.HintSize="416,322" sap2010:WorkflowViewState.IdRef="SendMail_24" IgnoreCRL="False" IsBodyHtml="False" Name="[strEmailDisplayName_12]" Port="[intEmailPort_1]" SecureConnection="Auto" SecurePassword="[sstrPass]" Server="[strEmailServer_12]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" UseISConnection="False" UseRichTextEditor="True">
+                      <ui:SendMail.AttachmentsBackup>
+                        <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
+                          <usau:BackupSlot.BackupValues>
+                            <scg:List x:TypeArguments="x:Object" x:Key="FilePaths" Capacity="2">
+                              <x:Null />
+                              <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                <InArgument x:TypeArguments="x:String">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_550">strAttachmentPath</CSharpValue>
+                                </InArgument>
+                              </scg:List>
+                            </scg:List>
+                            <scg:List x:TypeArguments="x:Object" x:Key="Existing" Capacity="1">
+                              <x:Null />
+                            </scg:List>
+                            <scg:List x:TypeArguments="x:Object" x:Key="Builder" Capacity="1">
+                              <x:Null />
+                            </scg:List>
+                          </usau:BackupSlot.BackupValues>
+                        </usau:BackupSlot>
+                      </ui:SendMail.AttachmentsBackup>
+                      <ui:SendMail.ConnectionDetailsBackupSlot>
+                        <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="LegacyConfiguration">
+                          <usau:BackupSlot.BackupValues>
+                            <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+                          </usau:BackupSlot.BackupValues>
+                        </usau:BackupSlot>
+                      </ui:SendMail.ConnectionDetailsBackupSlot>
+                      <ui:SendMail.Files>
+                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                          <InArgument x:TypeArguments="x:String">[strAttachmentPath]</InArgument>
+                        </scg:List>
+                      </ui:SendMail.Files>
+                    </ui:SendMail>
+                  </Sequence>
+                </If.Else>
+              </If>
+              <If x:Key="2" sap2010:Annotation.AnnotationText="Is E-mail Body in HTML?" Condition="[boolIsBodyHTML]" DisplayName="If - boolIsBodyHTML - SMTP - 2" sap:VirtualizedContainerService.HintSize="450,56" sap2010:WorkflowViewState.IdRef="If_25">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <ui:SendMail Bcc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" UseOAuth="{x:Null}" Action="Forward" AttachmentInputMode="FilePaths" AttachmentsCollection="[listAttachmentList]" Body="[strEmailBody]" Cc="[strEmailCC]" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="Send SMTP Mail Message - HTML - 2" Email="[strLogin]" EnableSSL="True" From="[strEmailSendOnBehalf_123]" sap:VirtualizedContainerService.HintSize="334,399" sap2010:WorkflowViewState.IdRef="SendMail_16" IgnoreCRL="False" IsBodyHtml="True" Name="[strEmailDisplayName_12]" Port="[intEmailPort_1]" SecureConnection="Auto" SecurePassword="[sstrPass]" Server="[strEmailServer_12]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" UseISConnection="False" UseRichTextEditor="True">
+                    <ui:SendMail.AttachmentsBackup>
+                      <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </ui:SendMail.AttachmentsBackup>
+                    <ui:SendMail.ConnectionDetailsBackupSlot>
+                      <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="LegacyConfiguration">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </ui:SendMail.ConnectionDetailsBackupSlot>
+                    <ui:SendMail.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                    </ui:SendMail.Files>
+                  </ui:SendMail>
+                </If.Then>
+                <If.Else>
+                  <ui:SendMail Bcc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" Result="{x:Null}" UseOAuth="{x:Null}" Action="Forward" AttachmentInputMode="FilePaths" AttachmentsCollection="[listAttachmentList]" Body="[strEmailBody]" Cc="[strEmailCC]" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="Send SMTP Mail Message - Not HTML - 2" Email="[strLogin]" EnableSSL="True" From="[strEmailSendOnBehalf_123]" sap:VirtualizedContainerService.HintSize="334,299" sap2010:WorkflowViewState.IdRef="SendMail_17" IgnoreCRL="False" IsBodyHtml="False" Name="[strEmailDisplayName_12]" Port="[intEmailPort_1]" SecureConnection="Auto" SecurePassword="[sstrPass]" Server="[strEmailServer_12]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" UseISConnection="False" UseRichTextEditor="True">
+                    <ui:SendMail.AttachmentsBackup>
+                      <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </ui:SendMail.AttachmentsBackup>
+                    <ui:SendMail.ConnectionDetailsBackupSlot>
+                      <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="LegacyConfiguration">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </ui:SendMail.ConnectionDetailsBackupSlot>
+                    <ui:SendMail.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                    </ui:SendMail.Files>
+                  </ui:SendMail>
+                </If.Else>
+              </If>
+            </Switch>
+            <Switch x:TypeArguments="x:Int32" x:Key="2" sap2010:Annotation.AnnotationText="Choose number of attachments." DisplayName="Switch&lt;Int32&gt; - intNoAttach_0_Path_1_List_2 - Exchange" Expression="[intNoAttach_0_Path_1_List_2]" sap:VirtualizedContainerService.HintSize="357,56" sap2010:WorkflowViewState.IdRef="Switch`1_7">
+              <Switch.Default>
+                <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </Switch.Default>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If x:Key="0" sap2010:Annotation.AnnotationText="Is E-mail Body in HTML?" Condition="[boolIsBodyHTML]" DisplayName="If - boolIsBodyHTML - Exchange - 0" sap:VirtualizedContainerService.HintSize="450,56" sap2010:WorkflowViewState.IdRef="If_28">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <If sap2010:Annotation.AnnotationText="Save an E-mail copy?" Condition="[boolSaveCopyInSentItems_2]" DisplayName="If - boolSaveCopyInSentItems_2 - boolIsBodyHTML - Exchange - 0" sap:VirtualizedContainerService.HintSize="334,56" sap2010:WorkflowViewState.IdRef="If_26">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="465,482" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" DirectoryId="{x:Null}" EmailAutodiscover="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" AttachmentInputMode="FilePaths" AuthenticationMode="UserNameAndPassword" Body="[strEmailBody]" Cc="[strEmailCC]" DisplayName="Send Exchange Mail Message - Save Copy HTML - 0" Domain="[strEmailDomain_2]" ExchangeVersion="Exchange2007_SP1" From="[strEmailSendOnBehalf_123]" sap:VirtualizedContainerService.HintSize="431,422" sap2010:WorkflowViewState.IdRef="SendExchangeMail_13" IsBodyHtml="True" IsDraft="False" Name="[strEmailDisplayName_12]" SaveCopy="True" SecurePassword="[sstrPass]" Server="[strEmailServer_12]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" User="[strLogin]">
+                          <ui:SendExchangeMail.AttachmentsBackup>
+                            <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
+                              <usau:BackupSlot.BackupValues>
+                                <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+                              </usau:BackupSlot.BackupValues>
+                            </usau:BackupSlot>
+                          </ui:SendExchangeMail.AttachmentsBackup>
+                          <ui:SendExchangeMail.Files>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                          </ui:SendExchangeMail.Files>
+                        </ui:SendExchangeMail>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="465,482" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" DirectoryId="{x:Null}" EmailAutodiscover="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" AttachmentInputMode="FilePaths" AuthenticationMode="UserNameAndPassword" Body="[strEmailBody]" Cc="[strEmailCC]" DisplayName="Send Exchange Mail Message - HTML - 0" Domain="[strEmailDomain_2]" ExchangeVersion="Exchange2007_SP1" From="[strEmailSendOnBehalf_123]" sap:VirtualizedContainerService.HintSize="417,422" sap2010:WorkflowViewState.IdRef="SendExchangeMail_25" IsBodyHtml="True" IsDraft="False" Name="[strEmailDisplayName_12]" SaveCopy="False" SecurePassword="[sstrPass]" Server="[strEmailServer_12]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" User="[strLogin]">
+                          <ui:SendExchangeMail.AttachmentsBackup>
+                            <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
+                              <usau:BackupSlot.BackupValues>
+                                <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+                              </usau:BackupSlot.BackupValues>
+                            </usau:BackupSlot>
+                          </ui:SendExchangeMail.AttachmentsBackup>
+                          <ui:SendExchangeMail.Files>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                          </ui:SendExchangeMail.Files>
+                        </ui:SendExchangeMail>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </If.Then>
+                <If.Else>
+                  <If sap2010:Annotation.AnnotationText="Save an E-mail copy?" Condition="[boolSaveCopyInSentItems_2]" DisplayName="If - boolSaveCopyInSentItems_2 - not boolIsBodyHTML - Exchange - 0" sap:VirtualizedContainerService.HintSize="334,56" sap2010:WorkflowViewState.IdRef="If_27">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="452,382" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" DirectoryId="{x:Null}" EmailAutodiscover="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" AttachmentInputMode="FilePaths" AuthenticationMode="UserNameAndPassword" Body="[strEmailBody]" Cc="[strEmailCC]" DisplayName="Send Exchange Mail Message - Save Copy Not HTML - 0" Domain="[strEmailDomain_2]" ExchangeVersion="Exchange2007_SP1" From="[strEmailSendOnBehalf_123]" sap:VirtualizedContainerService.HintSize="418,322" sap2010:WorkflowViewState.IdRef="SendExchangeMail_26" IsBodyHtml="False" IsDraft="False" Name="[strEmailDisplayName_12]" SaveCopy="True" SecurePassword="[sstrPass]" Server="[strEmailServer_12]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" User="[strLogin]">
+                          <ui:SendExchangeMail.AttachmentsBackup>
+                            <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
+                              <usau:BackupSlot.BackupValues>
+                                <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+                              </usau:BackupSlot.BackupValues>
+                            </usau:BackupSlot>
+                          </ui:SendExchangeMail.AttachmentsBackup>
+                          <ui:SendExchangeMail.Files>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                          </ui:SendExchangeMail.Files>
+                        </ui:SendExchangeMail>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="452,382" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" DirectoryId="{x:Null}" EmailAutodiscover="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" AttachmentInputMode="FilePaths" AuthenticationMode="UserNameAndPassword" Body="[strEmailBody]" Cc="[strEmailCC]" DisplayName="Send Exchange Mail Message - Not HTML - 0" Domain="[strEmailDomain_2]" ExchangeVersion="Exchange2007_SP1" From="[strEmailSendOnBehalf_123]" sap:VirtualizedContainerService.HintSize="418,322" sap2010:WorkflowViewState.IdRef="SendExchangeMail_27" IsBodyHtml="False" IsDraft="False" Name="[strEmailDisplayName_12]" SaveCopy="False" SecurePassword="[sstrPass]" Server="[strEmailServer_12]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" User="[strLogin]">
+                          <ui:SendExchangeMail.AttachmentsBackup>
+                            <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
+                              <usau:BackupSlot.BackupValues>
+                                <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+                              </usau:BackupSlot.BackupValues>
+                            </usau:BackupSlot>
+                          </ui:SendExchangeMail.AttachmentsBackup>
+                          <ui:SendExchangeMail.Files>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                          </ui:SendExchangeMail.Files>
+                        </ui:SendExchangeMail>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </If.Else>
+              </If>
+              <If x:Key="1" sap2010:Annotation.AnnotationText="Is E-mail Body in HTML?" Condition="[boolIsBodyHTML]" DisplayName="If - boolIsBodyHTML - Exchange - 1" sap:VirtualizedContainerService.HintSize="450,56" sap2010:WorkflowViewState.IdRef="If_31">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <If sap2010:Annotation.AnnotationText="Save an E-mail copy?" Condition="[boolSaveCopyInSentItems_2]" DisplayName="If - boolSaveCopyInSentItems_2 - boolIsBodyHTML - Exchange - 1" sap:VirtualizedContainerService.HintSize="334,56" sap2010:WorkflowViewState.IdRef="If_29">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="451,482" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" DirectoryId="{x:Null}" EmailAutodiscover="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" AttachmentInputMode="FilePaths" AuthenticationMode="UserNameAndPassword" Body="[strEmailBody]" Cc="[strEmailCC]" DisplayName="Send Exchange Mail Message - Save Copy HTML - 1" Domain="[strEmailDomain_2]" ExchangeVersion="Exchange2007_SP1" From="[strEmailSendOnBehalf_123]" sap:VirtualizedContainerService.HintSize="417,422" sap2010:WorkflowViewState.IdRef="SendExchangeMail_17" IsBodyHtml="True" IsDraft="False" Name="[strEmailDisplayName_12]" SaveCopy="True" SecurePassword="[sstrPass]" Server="[strEmailServer_12]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" User="[strLogin]">
+                          <ui:SendExchangeMail.AttachmentsBackup>
+                            <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
+                              <usau:BackupSlot.BackupValues>
+                                <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+                              </usau:BackupSlot.BackupValues>
+                            </usau:BackupSlot>
+                          </ui:SendExchangeMail.AttachmentsBackup>
+                          <ui:SendExchangeMail.Files>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                              <InArgument x:TypeArguments="x:String">[strAttachmentPath]</InArgument>
+                            </scg:List>
+                          </ui:SendExchangeMail.Files>
+                        </ui:SendExchangeMail>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="451,482" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" DirectoryId="{x:Null}" EmailAutodiscover="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" AttachmentInputMode="FilePaths" AuthenticationMode="UserNameAndPassword" Body="[strEmailBody]" Cc="[strEmailCC]" DisplayName="Send Exchange Mail Message - HTML - 1" Domain="[strEmailDomain_2]" ExchangeVersion="Exchange2007_SP1" From="[strEmailSendOnBehalf_123]" sap:VirtualizedContainerService.HintSize="417,422" sap2010:WorkflowViewState.IdRef="SendExchangeMail_18" IsBodyHtml="True" IsDraft="False" Name="[strEmailDisplayName_12]" SaveCopy="False" SecurePassword="[sstrPass]" Server="[strEmailServer_12]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" User="[strLogin]">
+                          <ui:SendExchangeMail.AttachmentsBackup>
+                            <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
+                              <usau:BackupSlot.BackupValues>
+                                <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+                              </usau:BackupSlot.BackupValues>
+                            </usau:BackupSlot>
+                          </ui:SendExchangeMail.AttachmentsBackup>
+                          <ui:SendExchangeMail.Files>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                              <InArgument x:TypeArguments="x:String">[strAttachmentPath]</InArgument>
+                            </scg:List>
+                          </ui:SendExchangeMail.Files>
+                        </ui:SendExchangeMail>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </If.Then>
+                <If.Else>
+                  <If sap2010:Annotation.AnnotationText="Save an E-mail copy?" Condition="[boolSaveCopyInSentItems_2]" DisplayName="If - boolSaveCopyInSentItems_2 - not boolIsBodyHTML - Exchange - 1" sap:VirtualizedContainerService.HintSize="334,56" sap2010:WorkflowViewState.IdRef="If_30">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="452,382" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" DirectoryId="{x:Null}" EmailAutodiscover="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" AttachmentInputMode="FilePaths" AuthenticationMode="UserNameAndPassword" Body="[strEmailBody]" Cc="[strEmailCC]" DisplayName="Send Exchange Mail Message - Save Copy Not HTML - 1" Domain="[strEmailDomain_2]" ExchangeVersion="Exchange2007_SP1" From="[strEmailSendOnBehalf_123]" sap:VirtualizedContainerService.HintSize="418,322" sap2010:WorkflowViewState.IdRef="SendExchangeMail_19" IsBodyHtml="False" IsDraft="False" Name="[strEmailDisplayName_12]" SaveCopy="True" SecurePassword="[sstrPass]" Server="[strEmailServer_12]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" User="[strLogin]">
+                          <ui:SendExchangeMail.AttachmentsBackup>
+                            <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
+                              <usau:BackupSlot.BackupValues>
+                                <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+                              </usau:BackupSlot.BackupValues>
+                            </usau:BackupSlot>
+                          </ui:SendExchangeMail.AttachmentsBackup>
+                          <ui:SendExchangeMail.Files>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                              <InArgument x:TypeArguments="x:String">[strAttachmentPath]</InArgument>
+                            </scg:List>
+                          </ui:SendExchangeMail.Files>
+                        </ui:SendExchangeMail>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="452,382" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" DirectoryId="{x:Null}" EmailAutodiscover="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" AttachmentInputMode="FilePaths" AuthenticationMode="UserNameAndPassword" Body="[strEmailBody]" Cc="[strEmailCC]" DisplayName="Send Exchange Mail Message - Not HTML - 1" Domain="[strEmailDomain_2]" ExchangeVersion="Exchange2007_SP1" From="[strEmailSendOnBehalf_123]" sap:VirtualizedContainerService.HintSize="418,322" sap2010:WorkflowViewState.IdRef="SendExchangeMail_20" IsBodyHtml="False" IsDraft="False" Name="[strEmailDisplayName_12]" SaveCopy="False" SecurePassword="[sstrPass]" Server="[strEmailServer_12]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" User="[strLogin]">
+                          <ui:SendExchangeMail.AttachmentsBackup>
+                            <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
+                              <usau:BackupSlot.BackupValues>
+                                <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+                              </usau:BackupSlot.BackupValues>
+                            </usau:BackupSlot>
+                          </ui:SendExchangeMail.AttachmentsBackup>
+                          <ui:SendExchangeMail.Files>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                              <InArgument x:TypeArguments="x:String">[strAttachmentPath]</InArgument>
+                            </scg:List>
+                          </ui:SendExchangeMail.Files>
+                        </ui:SendExchangeMail>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </If.Else>
+              </If>
+              <If x:Key="2" sap2010:Annotation.AnnotationText="Is E-mail Body in HTML?" Condition="[boolIsBodyHTML]" DisplayName="If - boolIsBodyHTML - Exchange - 2" sap:VirtualizedContainerService.HintSize="450,56" sap2010:WorkflowViewState.IdRef="If_34">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <If sap2010:Annotation.AnnotationText="Save an E-mail copy?" Condition="[boolSaveCopyInSentItems_2]" DisplayName="If - boolSaveCopyInSentItems_2 - boolIsBodyHTML - Exchange - 2" sap:VirtualizedContainerService.HintSize="334,56" sap2010:WorkflowViewState.IdRef="If_32">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="465,482" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" DirectoryId="{x:Null}" EmailAutodiscover="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" AttachmentInputMode="FilePaths" AttachmentsCollection="[listAttachmentList]" AuthenticationMode="UserNameAndPassword" Body="[strEmailBody]" Cc="[strEmailCC]" DisplayName="Send Exchange Mail Message - Save Copy HTML - 2" Domain="[strEmailDomain_2]" ExchangeVersion="Exchange2007_SP1" From="[strEmailSendOnBehalf_123]" sap:VirtualizedContainerService.HintSize="431,422" sap2010:WorkflowViewState.IdRef="SendExchangeMail_21" IsBodyHtml="True" IsDraft="False" Name="[strEmailDisplayName_12]" SaveCopy="True" SecurePassword="[sstrPass]" Server="[strEmailServer_12]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" User="[strLogin]">
+                          <ui:SendExchangeMail.AttachmentsBackup>
+                            <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
+                              <usau:BackupSlot.BackupValues>
+                                <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+                              </usau:BackupSlot.BackupValues>
+                            </usau:BackupSlot>
+                          </ui:SendExchangeMail.AttachmentsBackup>
+                          <ui:SendExchangeMail.Files>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                          </ui:SendExchangeMail.Files>
+                        </ui:SendExchangeMail>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="465,482" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" DirectoryId="{x:Null}" EmailAutodiscover="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" AttachmentInputMode="FilePaths" AttachmentsCollection="[listAttachmentList]" AuthenticationMode="UserNameAndPassword" Body="[strEmailBody]" Cc="[strEmailCC]" DisplayName="Send Exchange Mail Message - HTML - 2" Domain="[strEmailDomain_2]" ExchangeVersion="Exchange2007_SP1" From="[strEmailSendOnBehalf_123]" sap:VirtualizedContainerService.HintSize="431,422" sap2010:WorkflowViewState.IdRef="SendExchangeMail_22" IsBodyHtml="True" IsDraft="False" Name="[strEmailDisplayName_12]" SaveCopy="False" SecurePassword="[sstrPass]" Server="[strEmailServer_12]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" User="[strLogin]">
+                          <ui:SendExchangeMail.AttachmentsBackup>
+                            <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
+                              <usau:BackupSlot.BackupValues>
+                                <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+                              </usau:BackupSlot.BackupValues>
+                            </usau:BackupSlot>
+                          </ui:SendExchangeMail.AttachmentsBackup>
+                          <ui:SendExchangeMail.Files>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                          </ui:SendExchangeMail.Files>
+                        </ui:SendExchangeMail>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </If.Then>
+                <If.Else>
+                  <If sap2010:Annotation.AnnotationText="Save an E-mail copy?" Condition="[boolSaveCopyInSentItems_2]" DisplayName="If - boolSaveCopyInSentItems_2 - not boolIsBodyHTML - Exchange - 2" sap:VirtualizedContainerService.HintSize="334,56" sap2010:WorkflowViewState.IdRef="If_33">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="467,382" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" DirectoryId="{x:Null}" EmailAutodiscover="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" AttachmentInputMode="FilePaths" AttachmentsCollection="[listAttachmentList]" AuthenticationMode="UserNameAndPassword" Body="[strEmailBody]" Cc="[strEmailCC]" DisplayName="Send Exchange Mail Message - Save Copy Not HTML - 2" Domain="[strEmailDomain_2]" ExchangeVersion="Exchange2007_SP1" From="[strEmailSendOnBehalf_123]" sap:VirtualizedContainerService.HintSize="433,322" sap2010:WorkflowViewState.IdRef="SendExchangeMail_28" IsBodyHtml="False" IsDraft="False" Name="[strEmailDisplayName_12]" SaveCopy="True" SecurePassword="[sstrPass]" Server="[strEmailServer_12]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" User="[strLogin]">
+                          <ui:SendExchangeMail.AttachmentsBackup>
+                            <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
+                              <usau:BackupSlot.BackupValues>
+                                <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+                              </usau:BackupSlot.BackupValues>
+                            </usau:BackupSlot>
+                          </ui:SendExchangeMail.AttachmentsBackup>
+                          <ui:SendExchangeMail.Files>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                          </ui:SendExchangeMail.Files>
+                        </ui:SendExchangeMail>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="467,382" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" DirectoryId="{x:Null}" EmailAutodiscover="{x:Null}" MailMessage="{x:Null}" Password="{x:Null}" ResourceAttachmentList="{x:Null}" ResourceAttachments="{x:Null}" AttachmentInputMode="FilePaths" AttachmentsCollection="[listAttachmentList]" AuthenticationMode="UserNameAndPassword" Body="[strEmailBody]" Cc="[strEmailCC]" DisplayName="Send Exchange Mail Message - Not HTML - 2" Domain="[strEmailDomain_2]" ExchangeVersion="Exchange2007_SP1" From="[strEmailSendOnBehalf_123]" sap:VirtualizedContainerService.HintSize="433,322" sap2010:WorkflowViewState.IdRef="SendExchangeMail_29" IsBodyHtml="False" IsDraft="False" Name="[strEmailDisplayName_12]" SaveCopy="False" SecurePassword="[sstrPass]" Server="[strEmailServer_12]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" User="[strLogin]">
+                          <ui:SendExchangeMail.AttachmentsBackup>
+                            <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="FilePaths">
+                              <usau:BackupSlot.BackupValues>
+                                <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+                              </usau:BackupSlot.BackupValues>
+                            </usau:BackupSlot>
+                          </ui:SendExchangeMail.AttachmentsBackup>
+                          <ui:SendExchangeMail.Files>
+                            <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                          </ui:SendExchangeMail.Files>
+                        </ui:SendExchangeMail>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </If.Else>
+              </If>
+            </Switch>
+            <Switch x:TypeArguments="x:Int32" x:Key="3" sap2010:Annotation.AnnotationText="Choose number of attachments." DisplayName="Switch&lt;Int32&gt; - intNoAttach_0_Path_1_List_2 - OutlookApp" Expression="[intNoAttach_0_Path_1_List_2]" sap:VirtualizedContainerService.HintSize="357,56" sap2010:WorkflowViewState.IdRef="Switch`1_8">
+              <Switch.Default>
+                <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </Switch.Default>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If x:Key="0" sap2010:Annotation.AnnotationText="Is E-mail Body in HTML?" Condition="[boolIsBodyHTML]" DisplayName="If - boolIsBodyHTML - OutlookApp - 0" sap:VirtualizedContainerService.HintSize="450,56" sap2010:WorkflowViewState.IdRef="If_35">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <ui:SendOutlookMail Bcc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" UseRichTextEditor="{x:Null}" Account="[strEmailAccount_3]" Body="[strEmailBody]" Cc="[strEmailCC]" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="Send Outlook Mail Message - HTML - 0" sap:VirtualizedContainerService.HintSize="337,295" sap2010:WorkflowViewState.IdRef="SendOutlookMail_7" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" SentOnBehalfOfName="[strEmailSendOnBehalf_123]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" UseISConnection="False">
+                    <ui:SendOutlookMail.ConnectionDetailsBackupSlot>
+                      <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="{x:Null}">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </ui:SendOutlookMail.ConnectionDetailsBackupSlot>
+                    <ui:SendOutlookMail.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                    </ui:SendOutlookMail.Files>
+                  </ui:SendOutlookMail>
+                </If.Then>
+                <If.Else>
+                  <ui:SendOutlookMail Bcc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" UseRichTextEditor="{x:Null}" Account="[strEmailAccount_3]" Body="[strEmailBody]" Cc="[strEmailCC]" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="Send Outlook Mail Message - Not HTML - 0" sap:VirtualizedContainerService.HintSize="337,195" sap2010:WorkflowViewState.IdRef="SendOutlookMail_8" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" SentOnBehalfOfName="[strEmailSendOnBehalf_123]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" UseISConnection="False">
+                    <ui:SendOutlookMail.ConnectionDetailsBackupSlot>
+                      <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="{x:Null}">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </ui:SendOutlookMail.ConnectionDetailsBackupSlot>
+                    <ui:SendOutlookMail.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                    </ui:SendOutlookMail.Files>
+                  </ui:SendOutlookMail>
+                </If.Else>
+              </If>
+              <If x:Key="1" sap2010:Annotation.AnnotationText="Is E-mail Body in HTML?" Condition="[boolIsBodyHTML]" DisplayName="If - boolIsBodyHTML - OutlookApp - 1" sap:VirtualizedContainerService.HintSize="450,56" sap2010:WorkflowViewState.IdRef="If_36">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <ui:SendOutlookMail Bcc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" UseRichTextEditor="{x:Null}" Account="[strEmailAccount_3]" Body="[strEmailBody]" Cc="[strEmailCC]" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="Send Outlook Mail Message - HTML - 1" sap:VirtualizedContainerService.HintSize="337,295" sap2010:WorkflowViewState.IdRef="SendOutlookMail_9" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" SentOnBehalfOfName="[strEmailSendOnBehalf_123]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" UseISConnection="False">
+                    <ui:SendOutlookMail.ConnectionDetailsBackupSlot>
+                      <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="{x:Null}">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </ui:SendOutlookMail.ConnectionDetailsBackupSlot>
+                    <ui:SendOutlookMail.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                        <InArgument x:TypeArguments="x:String">[strAttachmentPath]</InArgument>
+                      </scg:List>
+                    </ui:SendOutlookMail.Files>
+                  </ui:SendOutlookMail>
+                </If.Then>
+                <If.Else>
+                  <ui:SendOutlookMail Bcc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" UseRichTextEditor="{x:Null}" Account="[strEmailAccount_3]" Body="[strEmailBody]" Cc="[strEmailCC]" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="Send Outlook Mail Message - Not HTML - 1" sap:VirtualizedContainerService.HintSize="337,195" sap2010:WorkflowViewState.IdRef="SendOutlookMail_10" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" SentOnBehalfOfName="[strEmailSendOnBehalf_123]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" UseISConnection="False">
+                    <ui:SendOutlookMail.ConnectionDetailsBackupSlot>
+                      <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="{x:Null}">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </ui:SendOutlookMail.ConnectionDetailsBackupSlot>
+                    <ui:SendOutlookMail.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                        <InArgument x:TypeArguments="x:String">[strAttachmentPath]</InArgument>
+                      </scg:List>
+                    </ui:SendOutlookMail.Files>
+                  </ui:SendOutlookMail>
+                </If.Else>
+              </If>
+              <If x:Key="2" sap2010:Annotation.AnnotationText="Is E-mail Body in HTML?" Condition="[boolIsBodyHTML]" DisplayName="If - boolIsBodyHTML - OutlookApp - 2" sap:VirtualizedContainerService.HintSize="450,56" sap2010:WorkflowViewState.IdRef="If_37">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <ui:SendOutlookMail Bcc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" UseRichTextEditor="{x:Null}" Account="[strEmailAccount_3]" AttachmentsCollection="[listAttachmentList]" Body="[strEmailBody]" Cc="[strEmailCC]" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="Send Outlook Mail Message - HTML - 2" sap:VirtualizedContainerService.HintSize="337,295" sap2010:WorkflowViewState.IdRef="SendOutlookMail_11" Importance="Normal" IsBodyHtml="True" IsDraft="False" Sensitivity="Normal" SentOnBehalfOfName="[strEmailSendOnBehalf_123]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" UseISConnection="False">
+                    <ui:SendOutlookMail.ConnectionDetailsBackupSlot>
+                      <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="{x:Null}">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </ui:SendOutlookMail.ConnectionDetailsBackupSlot>
+                    <ui:SendOutlookMail.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
+                    </ui:SendOutlookMail.Files>
+                  </ui:SendOutlookMail>
+                </If.Then>
+                <If.Else>
+                  <ui:SendOutlookMail Bcc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" UseRichTextEditor="{x:Null}" Account="[strEmailAccount_3]" AttachmentsCollection="[listAttachmentList]" Body="[strEmailBody]" Cc="[strEmailCC]" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="Send Outlook Mail Message - Not HTML - 2" sap:VirtualizedContainerService.HintSize="337,195" sap2010:WorkflowViewState.IdRef="SendOutlookMail_12" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" SentOnBehalfOfName="[strEmailSendOnBehalf_123]" Subject="[strEmailSubject]" TimeoutMS="[intSendEmailTOms]" To="[strEmailTO]" UseISConnection="False">
+                    <ui:SendOutlookMail.ConnectionDetailsBackupSlot>
+                      <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="{x:Null}">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="umae:ConnectionDetails, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </ui:SendOutlookMail.ConnectionDetailsBackupSlot>
+                    <ui:SendOutlookMail.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
+                    </ui:SendOutlookMail.Files>
+                  </ui:SendOutlookMail>
+                </If.Else>
+              </If>
+            </Switch>
+          </Switch>
+        </ActivityAction>
+      </ui:RetryScope.ActivityBody>
+      <ui:RetryScope.Condition>
+        <ActivityFunc x:TypeArguments="x:Boolean" />
+      </ui:RetryScope.Condition>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:RetryScope>
+    <Delay DisplayName="Delay - tsDelAfterSend" Duration="[tsDelAfterSend]" sap:VirtualizedContainerService.HintSize="450,123" sap2010:WorkflowViewState.IdRef="Delay_1" />
+    <ui:LogMessage DisplayName="Log Message - 100" sap:VirtualizedContainerService.HintSize="450,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - Outlook Send Email&quot;]" />
+  </Sequence>
+</Activity>
