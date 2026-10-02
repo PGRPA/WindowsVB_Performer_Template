@@ -132,7 +132,7 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID0}" sap2010:Annotation.AnnotationText="[Process_Name_Performer]&#xD;&#xA;[Process description]&#xD;&#xA;[Author]&#xD;&#xA;&#xD;&#xA;==========&#xD;&#xA;To modify:&#xD;&#xA;&#xD;&#xA;- change files names: Data\Config_Process_Name.xlsx, Tests\TS_Process_Name.xlsx,&#xD;&#xA;=&gt; to: Process_Name_Dispatcher\Performer&#xD;&#xA;- change 2 variables in 3 Workflows: Initialization\Init Configs, _Sandbox\Init Configs, TC_WorkflowName\Init Configs&#xD;&#xA;=&gt; Assign - strConfigFilePathLocal, Get Asset - strConfigFilePath&#xD;&#xA;&#xD;&#xA;- edit process: name, description, author here and in project.json&#xD;&#xA;- edit Main Workflow properties name&#xD;&#xA;- edit Config values and move file to another directory if needed&#xD;&#xA;- edit Project Settings&#xD;&#xA;&#xD;&#xA;- add assets to Orchestrator if needed&#xD;&#xA;- add Queue to Orchestrator&#xD;&#xA;- re-add test data Excel file, to TC workflows if needed&#xD;&#xA;- update packages if needed&#xD;&#xA;- open each file &amp; Workflow for error check&#xD;&#xA;&#xD;&#xA;- remove unused imports&#xD;&#xA;- remove unused Workflows&#xD;&#xA;- remove unnecessary Then-Else sequences&#xD;&#xA;- remove unused entries in Config&#xD;&#xA;- remove marked in yellow Settings &amp; Constants entries in Config&#xD;&#xA;&#xD;&#xA;- run analyzer&#xD;&#xA;- run parse XAML&#xD;&#xA;&#xD;&#xA;==========&#xD;&#xA;Delete if not used:&#xD;&#xA;&#xD;&#xA;Activities\Workflows - files - Config entries&#xD;&#xA;- Build Data Table - dtExcelReportTable - -&#xD;&#xA;- TC_WorkflowName.xaml TS_Process_Name.xlsx -&#xD;&#xA;- AppXYLogin.xaml - AppXYLogin&#xD;&#xA;- AppXYLogout.xaml - -&#xD;&#xA;- ExcelGetTable.xaml Input_File.xlsx ExcelInputFilePath, ExcelInputSheet, RequiredColumnNames, ExcelGetTable&#xD;&#xA;- ExcelAddToReport.xaml yyyy-MM-dd_Template.xlsx ExcelReportTempPath, ExcelReportTempSheet, ExcelReportFolder, ExcelReportName, ExcelAddToReport&#xD;&#xA;- OutlookGetEmails.xaml - OutlookInboxFolderPath, OutlookEmailsAmount, OutlookGetEmails&#xD;&#xA;- OutlookMoveEmail.xaml - OutlookInboxFolderPath, OutlookEmailsAmount, OutlookGetEmails&#xD;&#xA;- APIRunQuery.xaml - APIRunQuery&#xD;&#xA;- AssetBlockAndRelease - BlockAssetNameB4UseReport, BlockAssetB4UseReport, AssetBlockAndRelease&#xD;&#xA;- FolderForReportsCreate.xaml - -&#xD;&#xA;- FoldersCreate.xaml - -&#xD;&#xA;- QueueGetAllItems.xaml - -&#xD;&#xA;- ShowRobotStatus.xaml Robot_Zakończył_Pracę.txt RobotStatusFolderPath, ShowRobotStatus&#xD;&#xA;- SQLRunQuery.xaml - SQLRunQuery&#xD;&#xA;&#xD;&#xA;==========" DisplayName="Process_Name_Performer" sap:VirtualizedContainerService.HintSize="514.4,592" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID0}" sap2010:Annotation.AnnotationText="[Process_Name_Performer]&#xA;[Process description]&#xA;[Author]&#xA;&#xA;==========&#xA;To modify:&#xA;&#xA;- change files names: Data\Config_Process_Name.xlsx, Tests\TS_Process_Name.xlsx,&#xA;=&gt; to: Process_Name_Dispatcher\Performer&#xA;- change 2 variables in 3 Workflows: Initialization\Init Configs, _Sandbox\Init Configs, TC_WorkflowName\Init Configs&#xA;=&gt; Assign - strConfigFilePathLocal, Get Asset - strConfigFilePath&#xA;&#xA;- edit process: name, description, author here and in project.json&#xA;- edit Main Workflow properties name&#xA;- edit Config values and move file to another directory if needed&#xA;- edit Project Settings&#xA;&#xA;- add assets to Orchestrator if needed&#xA;- add Queue to Orchestrator&#xA;- re-add test data Excel file, to TC workflows if needed&#xA;- update packages if needed&#xA;- open each file &amp; Workflow for error check&#xA;&#xA;- remove unused imports&#xA;- remove unused Workflows&#xA;- remove unnecessary Then-Else sequences&#xA;- remove unused entries in Config&#xA;- remove marked in yellow Settings &amp; Constants entries in Config&#xA;&#xA;- run analyzer&#xA;- run parse XAML&#xA;&#xA;==========&#xA;Delete if not used:&#xA;&#xA;Activities\Workflows - files - Config entries&#xA;- Build Data Table - dtExcelReportTable - -&#xA;- TC_WorkflowName.xaml TS_Process_Name.xlsx -&#xA;- AppXYLogin.xaml - AppXYLogin&#xA;- AppXYLogout.xaml - -&#xA;- ExcelGetTable.xaml Input_File.xlsx ExcelInputFilePath, ExcelInputSheet, RequiredColumnNames, ExcelGetTable&#xA;- ExcelAddToReport.xaml yyyy-MM-dd_Template.xlsx ExcelReportTempPath, ExcelReportTempSheet, ExcelReportFolder, ExcelReportName, ExcelAddToReport&#xA;- OutlookGetEmails.xaml - OutlookInboxFolderPath, OutlookEmailsAmount, OutlookGetEmails&#xA;- OutlookMoveEmail.xaml - OutlookInboxFolderPath, OutlookEmailsAmount, OutlookGetEmails&#xA;- APIRunQuery.xaml - APIRunQuery&#xA;- AssetBlockAndRelease - BlockAssetNameB4UseReport, BlockAssetB4UseReport, AssetBlockAndRelease&#xA;- FolderForReportsCreate.xaml - -&#xA;- FoldersCreate.xaml - -&#xA;- QueueGetAllItems.xaml - -&#xA;- ShowRobotStatus.xaml Robot_Zakończył_Pracę.txt RobotStatusFolderPath, ShowRobotStatus&#xA;- SQLRunQuery.xaml - SQLRunQuery&#xA;&#xA;==========" DisplayName="Process_Name_Performer" sap:VirtualizedContainerService.HintSize="1119,808" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -622,7 +622,7 @@ DirectCast(SystemException.Data("ScreenshotPath"), List(Of String)).Select(Funct
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">114,108</av:Point>
-          <av:Size x:Key="ShapeSize">232,120.8</av:Size>
+          <av:Size x:Key="ShapeSize">232,121</av:Size>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
           <x:Double x:Key="StateContainerWidth">220</x:Double>
           <x:Double x:Key="StateContainerHeight">29</x:Double>
@@ -633,7 +633,7 @@ DirectCast(SystemException.Data("ScreenshotPath"), List(Of String)).Select(Funct
         <Transition DisplayName="System Exception (failed initialization)" sap:VirtualizedContainerService.HintSize="450,527" sap2010:WorkflowViewState.IdRef="Transition_8">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:PointCollection x:Key="ConnectorLocation">346,156.32 376,156.32 376,54 520,54</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">346,156.4 376,156.4 376,94.5 520,94.5</av:PointCollection>
               <x:Int32 x:Key="SrcConnectionPointIndex">28</x:Int32>
               <x:Int32 x:Key="DestConnectionPointIndex">33</x:Int32>
             </scg:Dictionary>
@@ -968,7 +968,7 @@ Config IsNot Nothing]</InArgument>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">520,45</av:Point>
-                  <av:Size x:Key="ShapeSize">20,20</av:Size>
+                  <av:Size x:Key="ShapeSize">200,110</av:Size>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   <x:Double x:Key="StateContainerWidth">188.1239408890009</x:Double>
                   <x:Double x:Key="StateContainerHeight">33.81001369116299</x:Double>
@@ -996,9 +996,9 @@ Config IsNot Nothing]</InArgument>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="Get the next transaction to be processed." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="228.8,109.6" sap2010:WorkflowViewState.IdRef="State_6">
+            <State x:Name="__ReferenceID1" sap2010:Annotation.AnnotationText="Get the next transaction to be processed." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="730,1986" sap2010:WorkflowViewState.IdRef="State_6">
               <State.Entry>
-                <Sequence sap2010:Annotation.AnnotationText="Retrieve a new transaction data to be processed.&#xA;The TransactionNumber variable holds the current transaction number and incrementing this variable makes the framework retrieve the next transaction. If the framework is retrying a failed transaction, this variable is not incremented until the maximum number of retry attempts is reached." DisplayName="Retrieve Data" sap:VirtualizedContainerService.HintSize="582.4,1588" sap2010:WorkflowViewState.IdRef="Sequence_122">
+                <Sequence sap2010:Annotation.AnnotationText="Retrieve a new transaction data to be processed.&#xA;The TransactionNumber variable holds the current transaction number and incrementing this variable makes the framework retrieve the next transaction. If the framework is retrying a failed transaction, this variable is not incremented until the maximum number of retry attempts is reached." DisplayName="Retrieve Data" sap:VirtualizedContainerService.HintSize="684,1560" sap2010:WorkflowViewState.IdRef="Sequence_122">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="ShouldStop" />
                   </Sequence.Variables>
@@ -1009,8 +1009,8 @@ Config IsNot Nothing]</InArgument>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ShouldStop DisplayName="Check Stop Signal" sap:VirtualizedContainerService.HintSize="548.8,122.4" sap2010:WorkflowViewState.IdRef="ShouldStop_3" Result="[ShouldStop]" />
-                  <Assign DisplayName="Assign - SystemException - GetQI" sap:VirtualizedContainerService.HintSize="548.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_35">
+                  <ui:ShouldStop DisplayName="Check Stop Signal" sap:VirtualizedContainerService.HintSize="650,123" sap2010:WorkflowViewState.IdRef="ShouldStop_3" Result="[ShouldStop]" />
+                  <Assign DisplayName="Assign - SystemException - GetQI" sap:VirtualizedContainerService.HintSize="650,175" sap2010:WorkflowViewState.IdRef="Assign_35">
                     <Assign.To>
                       <OutArgument x:TypeArguments="s:Exception">[SystemException]</OutArgument>
                     </Assign.To>
@@ -1018,7 +1018,7 @@ Config IsNot Nothing]</InArgument>
                       <InArgument x:TypeArguments="s:Exception">[Nothing]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Sequence sap2010:Annotation.AnnotationText="Check if current time is greater than Config time and smaller than Config time + 20 minutes." DisplayName="Check Time &amp; Stop" sap:VirtualizedContainerService.HintSize="548.8,101.6" sap2010:WorkflowViewState.IdRef="Sequence_116">
+                  <Sequence sap2010:Annotation.AnnotationText="Check if current time is greater than Config time and smaller than Config time + 20 minutes." DisplayName="Check Time &amp; Stop" sap:VirtualizedContainerService.HintSize="650,88" sap2010:WorkflowViewState.IdRef="Sequence_116">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="s:DateTime" Name="dateTimeAfterRobotStop" />
                       <Variable x:TypeArguments="s:DateTime" Name="dateTimePlus20" />
@@ -1093,7 +1093,7 @@ dateTimeAfterRobotStop)]</InArgument>
                       </If.Else>
                     </If>
                   </Sequence>
-                  <If Condition="[ShouldStop]" DisplayName="Should Stop or Get Next" sap:VirtualizedContainerService.HintSize="548.8,1036" sap2010:WorkflowViewState.IdRef="If_18">
+                  <If Condition="[ShouldStop]" DisplayName="Should Stop or Get Next" sap:VirtualizedContainerService.HintSize="650,1037" sap2010:WorkflowViewState.IdRef="If_18">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1101,7 +1101,7 @@ dateTimeAfterRobotStop)]</InArgument>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence DisplayName="Orchestrator stop requested" sap:VirtualizedContainerService.HintSize="547.2,24.8" sap2010:WorkflowViewState.IdRef="Sequence_117">
+                      <Sequence DisplayName="Orchestrator stop requested" sap:VirtualizedContainerService.HintSize="548,25" sap2010:WorkflowViewState.IdRef="Sequence_117">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1120,14 +1120,14 @@ dateTimeAfterRobotStop)]</InArgument>
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="547.2,881.6" sap2010:WorkflowViewState.IdRef="Sequence_121">
+                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="548,882" sap2010:WorkflowViewState.IdRef="Sequence_121">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <TryCatch DisplayName="Try Catch - GetTransactionData.xaml" sap:VirtualizedContainerService.HintSize="513.6,821.6" sap2010:WorkflowViewState.IdRef="TryCatch_27">
+                        <TryCatch DisplayName="Try Catch - GetTransactionData.xaml" sap:VirtualizedContainerService.HintSize="514,822" sap2010:WorkflowViewState.IdRef="TryCatch_27">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1135,14 +1135,14 @@ dateTimeAfterRobotStop)]</InArgument>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="512,227.2" sap2010:WorkflowViewState.IdRef="Sequence_118">
+                            <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="512,228" sap2010:WorkflowViewState.IdRef="Sequence_118">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Framework\GetTransactionData.xaml" sap:VirtualizedContainerService.HintSize="478.4,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_53" UnSafe="False" WorkflowFileName="Framework\GetTransactionData.xaml">
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Framework\GetTransactionData.xaml" sap:VirtualizedContainerService.HintSize="478,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_53" UnSafe="False" WorkflowFileName="Framework\GetTransactionData.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InArgument x:TypeArguments="x:Int32" x:Key="in_TransactionNumber">[TransactionNumber]</InArgument>
                                   <OutArgument x:TypeArguments="ui:QueueItem" x:Key="out_TransactionItem">[TransactionItem]</OutArgument>
@@ -1171,15 +1171,15 @@ dateTimeAfterRobotStop)]</InArgument>
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="s:Exception" Name="Exception" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Log exception message and end process" sap:VirtualizedContainerService.HintSize="512,437.6" sap2010:WorkflowViewState.IdRef="Sequence_119">
+                                <Sequence DisplayName="Log exception message and end process" sap:VirtualizedContainerService.HintSize="512,437" sap2010:WorkflowViewState.IdRef="Sequence_119">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ui:LogMessage DisplayName="Log Message - 19" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_65" Level="Fatal" Message="[Config(&quot;LogMessage_GetTransactionDataError&quot;).ToString+TransactionNumber.ToString+&quot;. &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source]" />
-                                  <ui:MultipleAssign DisplayName="Assign - End Process (Could not get new transaction)" sap:VirtualizedContainerService.HintSize="478.4,203.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_11">
+                                  <ui:LogMessage DisplayName="Log Message - 19" sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="LogMessage_65" Level="Fatal" Message="[Config(&quot;LogMessage_GetTransactionDataError&quot;).ToString+TransactionNumber.ToString+&quot;. &quot;+Exception.Message+&quot; at Source: &quot;+Exception.Source]" />
+                                  <ui:MultipleAssign DisplayName="Assign - End Process (Could not get new transaction)" sap:VirtualizedContainerService.HintSize="478,202" sap2010:WorkflowViewState.IdRef="MultipleAssign_11">
                                     <ui:MultipleAssign.AssignOperations>
                                       <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                                         <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_24">
@@ -1214,7 +1214,7 @@ dateTimeAfterRobotStop)]</InArgument>
                             </Catch>
                           </TryCatch.Catches>
                           <TryCatch.Finally>
-                            <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="512,24.8" sap2010:WorkflowViewState.IdRef="Sequence_120">
+                            <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="512,25" sap2010:WorkflowViewState.IdRef="Sequence_120">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1232,7 +1232,7 @@ dateTimeAfterRobotStop)]</InArgument>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">505.5,235</av:Point>
-                  <av:Size x:Key="ShapeSize">228.8,109.6</av:Size>
+                  <av:Size x:Key="ShapeSize">229,110</av:Size>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   <x:Double x:Key="StateContainerWidth">217</x:Double>
                   <x:Double x:Key="StateContainerHeight">34</x:Double>
@@ -1249,7 +1249,7 @@ dateTimeAfterRobotStop)]</InArgument>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.To>
-                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="240,191.2" sap2010:WorkflowViewState.IdRef="State_7">
+                    <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="560,1623" sap2010:WorkflowViewState.IdRef="State_7">
                       <State.Entry>
                         <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="514,1139" sap2010:WorkflowViewState.IdRef="TryCatch_29">
                           <sap:WorkflowViewStateService.ViewState>
@@ -1391,8 +1391,8 @@ dateTimeAfterRobotStop)]</InArgument>
                                         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)" x:Key="dictOutputData">[dictOutputData]</InArgument>
                                         <InArgument x:TypeArguments="x:String" x:Key="strDateStart">[strDateStart]</InArgument>
                                         <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[TransactionItem]</InArgument>
-                                        <InArgument x:TypeArguments="ui:BusinessRuleException" x:Key="in_BusinessException">[Nothing]</InArgument>
-                                        <InArgument x:TypeArguments="s:Exception" x:Key="in_SystemException">[Nothing]</InArgument>
+                                        <InArgument x:TypeArguments="ui:BusinessRuleException" x:Key="in_BusinessException">[BusinessException]</InArgument>
+                                        <InArgument x:TypeArguments="s:Exception" x:Key="in_SystemException">[SystemException]</InArgument>
                                         <InArgument x:TypeArguments="x:String" x:Key="in_TransactionID">[TransactionID]</InArgument>
                                         <InArgument x:TypeArguments="x:String" x:Key="in_TransactionField1">[TransactionField1]</InArgument>
                                         <InArgument x:TypeArguments="x:String" x:Key="in_TransactionField2">[TransactionField2]</InArgument>
@@ -1453,7 +1453,7 @@ dateTimeAfterRobotStop)]</InArgument>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">500,424</av:Point>
-                          <av:Size x:Key="ShapeSize">240,191.2</av:Size>
+                          <av:Size x:Key="ShapeSize">240,192</av:Size>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           <x:Double x:Key="StateContainerWidth">227.92953933936704</x:Double>
                           <x:Double x:Key="StateContainerHeight">34.79781563235815</x:Double>
@@ -1516,7 +1516,7 @@ dateTimeAfterRobotStop)]</InArgument>
                 <Transition sap2010:Annotation.AnnotationText="This is a simple mecanism to stop the process.&#xA;In reallife scenario you can stop the process when there is no more data to process or on a schedule." DisplayName="No Data" sap:VirtualizedContainerService.HintSize="647.2,1284" sap2010:WorkflowViewState.IdRef="Transition_15">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:PointCollection x:Key="ConnectorLocation">619.9,235 619.9,205 530,205 530,65</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">620,235 620,155</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">38</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">39</x:Int32>
                       <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>

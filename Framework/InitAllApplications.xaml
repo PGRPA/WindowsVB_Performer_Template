@@ -90,7 +90,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="InitAllApplications" sap:VirtualizedContainerService.HintSize="793,807.6566666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="InitAllApplications" sap:VirtualizedContainerService.HintSize="1119,807.6566666666666" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ScreenshotPath" />
     </Sequence.Variables>
@@ -149,7 +149,7 @@
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>
-    <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" sap2010:Annotation.AnnotationText="Try logging to app." DisplayName="Retry Scope - AppXYLogin.xaml" sap:VirtualizedContainerService.HintSize="450,79" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="[Int32.Parse(jsonConfig(&quot;RS&quot;)(&quot;AppXYLogin&quot;)(&quot;NR&quot;).ToString())]" RetryInterval="[TimeSpan.FromSeconds(Int32.Parse(jsonConfig(&quot;RS&quot;)(&quot;AppXYLogin&quot;)(&quot;TS&quot;).ToString()))]">
+    <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" sap2010:Annotation.AnnotationText="Try logging to app." DisplayName="Retry Scope - AppXYLogin.xaml" sap:VirtualizedContainerService.HintSize="452,345" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="[Int32.Parse(jsonConfig(&quot;RS&quot;)(&quot;AppXYLogin&quot;)(&quot;NR&quot;).ToString())]" RetryInterval="[TimeSpan.FromSeconds(Int32.Parse(jsonConfig(&quot;RS&quot;)(&quot;AppXYLogin&quot;)(&quot;TS&quot;).ToString()))]">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
           <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,139" sap2010:WorkflowViewState.IdRef="Sequence_3">
@@ -158,7 +158,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch sap2010:Annotation.AnnotationText="Try logging to app." DisplayName="Try Catch - AppXYLogin.xaml" sap:VirtualizedContainerService.HintSize="416,79" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+            <TryCatch sap2010:Annotation.AnnotationText="Try logging to app." DisplayName="Try Catch - AppXYLogin.xaml" sap:VirtualizedContainerService.HintSize="452,948" sap2010:WorkflowViewState.IdRef="TryCatch_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -245,7 +245,7 @@
                           </Sequence>
                         </TryCatch.Finally>
                       </TryCatch>
-                      <TryCatch sap2010:Annotation.AnnotationText="Try to logout from AppXY." DisplayName="Try Catch - AppXYLogout.xaml - After AE" sap:VirtualizedContainerService.HintSize="416,88" sap2010:WorkflowViewState.IdRef="TryCatch_6">
+                      <TryCatch sap2010:Annotation.AnnotationText="Try to logout from AppXY." DisplayName="Try Catch - AppXYLogout.xaml - After AE" sap:VirtualizedContainerService.HintSize="452,859" sap2010:WorkflowViewState.IdRef="TryCatch_6">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -281,7 +281,7 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <ui:LogMessage DisplayName="Log Message - 30" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Failed to close AppXY gracefully, killing&quot;]" />
-                                <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process - AppXY" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="AppXY" />
+                                <ui:KillProcess Process="{x:Null}" AppliesTo="OnlyCurrentUser" ContinueOnError="True" DisplayName="Kill Process - AppXY" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="AppXY" />
                               </Sequence>
                             </ActivityAction>
                           </Catch>

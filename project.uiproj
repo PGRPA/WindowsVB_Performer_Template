@@ -1,6 +1,6 @@
 {
   "Name": "WindowsVB_Performer_Template",
   "ProjectType": "Process",
-  "Description": "Process description.",
+  "Description": "UiPath performer template for Windows VB projects",
   "MainFile": "Main.xaml"
 }

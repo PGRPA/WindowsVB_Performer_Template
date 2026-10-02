@@ -1,7 +1,7 @@
 {
   "name": "WindowsVB_Performer_Template",
   "projectId": "a4924427-b38f-4fd6-8f7c-d6773a51f3f5",
-  "description": "Process description.",
+  "description": "UiPath performer template for Windows VB projects",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Database.Activities": "[2.0.0]",
