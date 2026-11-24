@@ -108,7 +108,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - 122" sap:VirtualizedContainerService.HintSize="489,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - Folders Create&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 123" sap:VirtualizedContainerService.HintSize="489,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - Folders Create&quot;]" />
     <ui:MultipleAssign sap2010:Annotation.AnnotationText="Add &quot;\\&quot;" DisplayName="Multiple Assign - arrSubSequentFolders &amp; strPartialFolderPath" sap:VirtualizedContainerService.HintSize="489,242" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
@@ -151,7 +151,7 @@ strFileOrFolderPathToCheck.Split("\", StringSplitOptions.RemoveEmptyEntries))]</
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:MultipleAssign>
-    <ui:LogMessage DisplayName="Log Message - 123" sap:VirtualizedContainerService.HintSize="489,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Checking folders exist, path: &quot; + string.Join(&quot;\&quot;, arrSubSequentFolders)]" />
+    <ui:LogMessage DisplayName="Log Message - 124" sap:VirtualizedContainerService.HintSize="489,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Checking folders exist, path: &quot; + string.Join(&quot;\&quot;, arrSubSequentFolders)]" />
     <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Check each sub-folder in given folder path." DisplayName="For Each - arrSubSequentFolders" sap:VirtualizedContainerService.HintSize="489,1128" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[arrSubSequentFolders]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
@@ -194,7 +194,7 @@ strFileOrFolderPathToCheck.Split("\", StringSplitOptions.RemoveEmptyEntries))]</
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message - 124" sap:VirtualizedContainerService.HintSize="417,166" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Folder exists: &quot; + strPartialFolderPath]" />
+                  <ui:LogMessage DisplayName="Log Message - 125" sap:VirtualizedContainerService.HintSize="417,166" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Folder exists: &quot; + strPartialFolderPath]" />
                 </Sequence>
               </If.Then>
               <If.Else>
@@ -213,7 +213,7 @@ strFileOrFolderPathToCheck.Split("\", StringSplitOptions.RemoveEmptyEntries))]</
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:LogMessage DisplayName="Log Message - 125" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Creating: &quot; + CurrentFolder]" />
+                          <ui:LogMessage DisplayName="Log Message - 126" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Creating: &quot; + CurrentFolder]" />
                           <ui:CreateDirectory ContinueOnError="{x:Null}" Output="{x:Null}" DisplayName="Create Folder - strPartialFolderPath" sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="CreateDirectory_3" Path="[strPartialFolderPath]" />
                           <ui:FolderExistsX DisplayName="Folder Exists - boolCurrentFolderExists" Exists="[boolCurrentFolderExists]" sap:VirtualizedContainerService.HintSize="416,158" sap2010:WorkflowViewState.IdRef="FolderExistsX_1" Path="[strPartialFolderPath]" />
                         </Sequence>
@@ -246,6 +246,6 @@ strFileOrFolderPathToCheck.Split("\", StringSplitOptions.RemoveEmptyEntries))]</
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <ui:LogMessage DisplayName="Log Message - 126" sap:VirtualizedContainerService.HintSize="489,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - Folders Create&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 127" sap:VirtualizedContainerService.HintSize="489,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - Folders Create&quot;]" />
   </Sequence>
 </Activity>

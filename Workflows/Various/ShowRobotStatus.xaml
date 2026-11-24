@@ -123,7 +123,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - 139" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - Show Robot Status&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 140" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - Show Robot Status&quot;]" />
     <Sequence sap2010:Annotation.AnnotationText="Set variables." DisplayName="Set Vars" sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -206,7 +206,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message - 140" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Robot run file already exists&quot;]" />
+              <ui:LogMessage DisplayName="Log Message - 141" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Robot run file already exists&quot;]" />
             </Sequence>
           </If.Then>
           <If.Else>
@@ -327,7 +327,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message - 141" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Robot stopped file already exists&quot;]" />
+              <ui:LogMessage DisplayName="Log Message - 142" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Robot stopped file already exists&quot;]" />
             </Sequence>
           </If.Then>
           <If.Else>
@@ -445,7 +445,7 @@
               <InArgument x:TypeArguments="x:String">[if(intRobotRun_1_RobotStopped_2 = 1, strFileRobotRun, strFileRobotStopped)]</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:LogMessage DisplayName="Log Message - 142" sap:VirtualizedContainerService.HintSize="452,166" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;File already exists: &quot; + strFilePathToSet_2]" />
+          <ui:LogMessage DisplayName="Log Message - 143" sap:VirtualizedContainerService.HintSize="452,166" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;File already exists: &quot; + strFilePathToSet_2]" />
         </Sequence>
       </Switch.Default>
       <sap:WorkflowViewStateService.ViewState>
@@ -472,7 +472,7 @@
                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message - 143" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Renaming: &quot; + strExistingFilePath_1 + &quot;, to: &quot; + strFilePathToSet_2]" />
+                <ui:LogMessage DisplayName="Log Message - 144" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Renaming: &quot; + strExistingFilePath_1 + &quot;, to: &quot; + strFilePathToSet_2]" />
                 <ui:RenameFileX FileResource="{x:Null}" OutputFileResource="{x:Null}" DisplayName="Rename File - strFilePathToSet_2" FilePath="[strExistingFilePath_1]" sap:VirtualizedContainerService.HintSize="416,223" sap2010:WorkflowViewState.IdRef="RenameFileX_1" KeepExtension="True" NewName="[System.IO.Path.GetFileName(strFilePathToSet_2)]" />
                 <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists - boolRenamedFileExists" Exists="[boolRenamedFileExists]" sap:VirtualizedContainerService.HintSize="416,165" sap2010:WorkflowViewState.IdRef="PathExists_3" Path="[strFilePathToSet_2]" PathType="File" />
               </Sequence>
@@ -509,7 +509,7 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message - 144" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Creating: &quot; + strFilePathToSet_2]" />
+                <ui:LogMessage DisplayName="Log Message - 145" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Creating: &quot; + strFilePathToSet_2]" />
                 <ui:CreateFile Name="{x:Null}" Output="{x:Null}" PathResource="{x:Null}" DisplayName="Create File - strFilePathToSet_2" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="CreateFile_1" Path="[strFilePathToSet_2]" />
                 <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists - boolCreatedFileExists" Exists="[boolCreatedFileExists]" sap:VirtualizedContainerService.HintSize="416,165" sap2010:WorkflowViewState.IdRef="PathExists_4" Path="[strFilePathToSet_2]" PathType="File" />
               </Sequence>
@@ -556,7 +556,7 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message - 145" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Adding message: &quot; + If(String.IsNullOrEmpty(strOptionalFileMsg), &quot;[empty]&quot;, strOptionalFileMsg)]" />
+                  <ui:LogMessage DisplayName="Log Message - 146" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Adding message: &quot; + If(String.IsNullOrEmpty(strOptionalFileMsg), &quot;[empty]&quot;, strOptionalFileMsg)]" />
                   <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Text File - strFilePathToSet_2" FileName="[strFilePathToSet_2]" sap:VirtualizedContainerService.HintSize="416,167" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[strOptionalFileMsg]" />
                 </Sequence>
               </ActivityAction>
@@ -584,6 +584,6 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:LogMessage DisplayName="Log Message - 146" sap:VirtualizedContainerService.HintSize="450,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - Show Robot Status&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 147" sap:VirtualizedContainerService.HintSize="450,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - Show Robot Status&quot;]" />
   </Sequence>
 </Activity>

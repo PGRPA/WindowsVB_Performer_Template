@@ -115,7 +115,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - 34" sap:VirtualizedContainerService.HintSize="650,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;&gt;&gt;Start - Processing item: &quot; + in_TransactionItem.Reference.ToString()]" />
+    <ui:LogMessage DisplayName="Log Message - 35" sap:VirtualizedContainerService.HintSize="650,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;&gt;&gt;Start - Processing item: &quot; + in_TransactionItem.Reference.ToString()]" />
     <Assign DisplayName="Assign - Error Status" sap:VirtualizedContainerService.HintSize="650,175" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[dictOutputData("Status")]</OutArgument>
@@ -222,6 +222,6 @@
         <InArgument x:TypeArguments="x:String">[jsonConfig("Status")(0).ToString()]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message - 35" sap:VirtualizedContainerService.HintSize="650,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;&gt;&gt;Stop - Processing item: &quot; + in_TransactionItem.Reference.ToString()]" />
+    <ui:LogMessage DisplayName="Log Message - 36" sap:VirtualizedContainerService.HintSize="650,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;&gt;&gt;Stop - Processing item: &quot; + in_TransactionItem.Reference.ToString()]" />
   </Sequence>
 </Activity>

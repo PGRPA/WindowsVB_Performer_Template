@@ -124,7 +124,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - 147" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - SQL Run Query&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 148" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - SQL Run Query&quot;]" />
     <Sequence sap2010:Annotation.AnnotationText="Run given query." DisplayName="Prepare &amp; Run SQL Query" sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="strSQLUser" />
@@ -231,8 +231,8 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:RetryScope>
-      <ui:LogMessage DisplayName="Log Message - 148" sap:VirtualizedContainerService.HintSize="478,166" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[If(dtSQLResults.Rows.Count &gt; 0, &quot;Sql returned rows: &quot; + dtSQLResults.Rows.Count.ToString(), &quot;Sql returned no data&quot;)]" />
+      <ui:LogMessage DisplayName="Log Message - 149" sap:VirtualizedContainerService.HintSize="478,166" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[If(dtSQLResults.Rows.Count &gt; 0, &quot;Sql returned rows: &quot; + dtSQLResults.Rows.Count.ToString(), &quot;Sql returned no data&quot;)]" />
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message - 149" sap:VirtualizedContainerService.HintSize="450,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - SQL Run Query&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 150" sap:VirtualizedContainerService.HintSize="450,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - SQL Run Query&quot;]" />
   </Sequence>
 </Activity>

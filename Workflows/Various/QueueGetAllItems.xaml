@@ -120,7 +120,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - 131" sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - Queue Get All Items&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 132" sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - Queue Get All Items&quot;]" />
     <ui:MultipleAssign DisplayName="Multiple Assign - Set Begin Details" sap:VirtualizedContainerService.HintSize="478,211" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
@@ -159,7 +159,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message - 132" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Getting QI from: &quot; + strQueueName]" />
+          <ui:LogMessage DisplayName="Log Message - 133" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Getting QI from: &quot; + strQueueName]" />
           <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" DisplayName="Retry Scope - Get Queue Items - Success &amp; Failed" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="[intGetQIRSNR]" RetryInterval="[tsGetQIRSTS]">
             <ui:RetryScope.ActivityBody>
               <ActivityAction>
@@ -328,7 +328,7 @@
         </Sequence>
       </ui:InterruptibleDoWhile.Body>
     </ui:InterruptibleDoWhile>
-    <ui:LogMessage DisplayName="Log Message - 133" sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Table with Queue Items [Successful, Failed] has: &quot; + dtQueueItemsDetails.Rows.Count.ToString() + &quot; row(s)&quot;]" />
-    <ui:LogMessage DisplayName="Log Message - 134" sap:VirtualizedContainerService.HintSize="478,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - Queue Get All Items&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 134" sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Table with Queue Items [Successful, Failed] has: &quot; + dtQueueItemsDetails.Rows.Count.ToString() + &quot; row(s)&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 135" sap:VirtualizedContainerService.HintSize="478,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - Queue Get All Items&quot;]" />
   </Sequence>
 </Activity>

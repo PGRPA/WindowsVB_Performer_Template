@@ -111,7 +111,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - 80" sap:VirtualizedContainerService.HintSize="477.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - Excel Convert Table To Html&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 81" sap:VirtualizedContainerService.HintSize="477.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - Excel Convert Table To Html&quot;]" />
     <ui:MultipleAssign DisplayName="Multiple Assign - Outputs" sap:VirtualizedContainerService.HintSize="477.6,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
@@ -152,7 +152,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message - 81" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Error" Message="[&quot;Cannot convert input table to Html, table is null&quot;]" />
+          <ui:LogMessage DisplayName="Log Message - 82" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Error" Message="[&quot;Cannot convert input table to Html, table is null&quot;]" />
           <ui:Return DisplayName="Return - dtExcelTable == null" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="Return_1" />
         </Sequence>
       </If.Then>
@@ -350,7 +350,7 @@
         <InArgument x:TypeArguments="x:String">[If(string.IsNullOrEmpty(strHtmlTableContent), String.Format("&lt;tr&gt;&lt;td colspan='{0}' style=""text-align: center""&gt;[No data found]&lt;/td&gt;&lt;/tr&gt;", listDataColumn.Count), strHtmlTableContent)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message - 82" sap:VirtualizedContainerService.HintSize="477.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Table header: &quot; + strHtmlTableHeader + Environment.NewLine + &quot;Table content: &quot; + strHtmlTableContent]" />
-    <ui:LogMessage DisplayName="Log Message - 83" sap:VirtualizedContainerService.HintSize="477.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - Excel Convert Table To Html&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 83" sap:VirtualizedContainerService.HintSize="477.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;Table header: &quot; + strHtmlTableHeader + Environment.NewLine + &quot;Table content: &quot; + strHtmlTableContent]" />
+    <ui:LogMessage DisplayName="Log Message - 84" sap:VirtualizedContainerService.HintSize="477.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - Excel Convert Table To Html&quot;]" />
   </Sequence>
 </Activity>

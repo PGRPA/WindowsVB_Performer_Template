@@ -169,7 +169,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - 98" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - Outlook Send Email&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 99" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - Outlook Send Email&quot;]" />
     <If sap2010:Annotation.AnnotationText="Read E-mail credentials?" Condition="[strEmailCredName_12 &lt;&gt; &quot;&quot;]" DisplayName="If - strEmailCredName_12 != &quot;&quot;" sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -343,7 +343,7 @@
         </If.Else>
       </If>
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message - 99" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Using method: &quot; + &#xA;If(intSMTP_1_Exchange_2_Outlook_3 = 1, &#xA; &quot;SMTP&quot;, If(intSMTP_1_Exchange_2_Outlook_3 = 2, &#xA;  &quot;Exchange&quot;, &#xA;  &quot;Outlook Application&quot;)) + &#xA;&quot;, Attachments: &quot; + &#xA;If(intNoAttach_0_Path_1_List_2 = 0, &#xA; &quot;0&quot;, If(intNoAttach_0_Path_1_List_2 = 1, &#xA;  &quot;1&quot;, &#xA;  listAttachmentList.Count.ToString())) + &#xA;&quot;, E-mail sent to: &quot; + &#xA;If(String.IsNullOrEmpty(strEmailCC), &#xA; strEmailTO, &#xA; strEmailTO + &quot;, CC: &quot; + strEmailCC)]" />
+    <ui:LogMessage DisplayName="Log Message - 100" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Using method: &quot; + &#xA;If(intSMTP_1_Exchange_2_Outlook_3 = 1, &#xA; &quot;SMTP&quot;, If(intSMTP_1_Exchange_2_Outlook_3 = 2, &#xA;  &quot;Exchange&quot;, &#xA;  &quot;Outlook Application&quot;)) + &#xA;&quot;, Attachments: &quot; + &#xA;If(intNoAttach_0_Path_1_List_2 = 0, &#xA; &quot;0&quot;, If(intNoAttach_0_Path_1_List_2 = 1, &#xA;  &quot;1&quot;, &#xA;  listAttachmentList.Count.ToString())) + &#xA;&quot;, E-mail sent to: &quot; + &#xA;If(String.IsNullOrEmpty(strEmailCC), &#xA; strEmailTO, &#xA; strEmailTO + &quot;, CC: &quot; + strEmailCC)]" />
     <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" sap2010:Annotation.AnnotationText="Try to send E-mail to given recipients." DisplayName="Retry Scope - Switch - intSMTP_1_Exchange_2_OutlookApp_3" sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="[intSendEmailRSNR]" RetryInterval="[tsSendEmailRSTS]">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
@@ -1120,6 +1120,6 @@
       </sap:WorkflowViewStateService.ViewState>
     </ui:RetryScope>
     <Delay DisplayName="Delay - tsDelAfterSend" Duration="[tsDelAfterSend]" sap:VirtualizedContainerService.HintSize="450,123" sap2010:WorkflowViewState.IdRef="Delay_1" />
-    <ui:LogMessage DisplayName="Log Message - 100" sap:VirtualizedContainerService.HintSize="450,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - Outlook Send Email&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 101" sap:VirtualizedContainerService.HintSize="450,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - Outlook Send Email&quot;]" />
   </Sequence>
 </Activity>

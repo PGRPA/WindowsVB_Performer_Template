@@ -128,7 +128,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - 84" sap:VirtualizedContainerService.HintSize="504,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - Excel Get Table&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 85" sap:VirtualizedContainerService.HintSize="504,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - Excel Get Table&quot;]" />
     <TryCatch sap2010:Annotation.AnnotationText="Try to read Excel input file." DisplayName="Try Catch - Retry Scope - Excel Application Scope" sap:VirtualizedContainerService.HintSize="504,803.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -220,7 +220,7 @@
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>
-    <ui:LogMessage DisplayName="Log Message - 85" sap:VirtualizedContainerService.HintSize="504,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;File: &quot; + System.IO.Path.GetFileName(strInputExcelPath) + &quot;, Sheet: &quot; + strInputExcelSheetName +  &quot;, has: &quot; + dtExcelOutput.Rows.Count.ToString() + &quot; rows(s)&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 86" sap:VirtualizedContainerService.HintSize="504,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;File: &quot; + System.IO.Path.GetFileName(strInputExcelPath) + &quot;, Sheet: &quot; + strInputExcelSheetName +  &quot;, has: &quot; + dtExcelOutput.Rows.Count.ToString() + &quot; rows(s)&quot;]" />
     <Sequence sap2010:Annotation.AnnotationText="Validate provided Excel input dataTable." DisplayName="Validate Input Data" sap:VirtualizedContainerService.HintSize="504,88" sap2010:WorkflowViewState.IdRef="Sequence_6">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -245,7 +245,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message - 86" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;No column validation provided&quot;]" />
+            <ui:LogMessage DisplayName="Log Message - 87" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Trace" Message="[&quot;No column validation provided&quot;]" />
           </Sequence>
         </If.Then>
         <If.Else>
@@ -366,7 +366,7 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message - 87" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Trace" Message="[If(boolValidateEmptyStatus, &quot;No Status column name to check provided&quot;, &quot;Status validation off&quot;)]" />
+                <ui:LogMessage DisplayName="Log Message - 88" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Trace" Message="[If(boolValidateEmptyStatus, &quot;No Status column name to check provided&quot;, &quot;Status validation off&quot;)]" />
               </Sequence>
             </If.Then>
             <If.Else>
@@ -402,7 +402,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message - 88" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Table contains empty fields [&quot; + strStatusColumnName + &quot;='']: &quot; + dtExcelOutput.AsEnumerable().Where(function(x) String.IsNullOrEmpty(x(strStatusColumnName).ToString())).CopyToDataTable().Rows.Count.ToString()]" />
+                      <ui:LogMessage DisplayName="Log Message - 89" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Table contains empty fields [&quot; + strStatusColumnName + &quot;='']: &quot; + dtExcelOutput.AsEnumerable().Where(function(x) String.IsNullOrEmpty(x(strStatusColumnName).ToString())).CopyToDataTable().Rows.Count.ToString()]" />
                     </Sequence>
                   </If.Then>
                   <If.Else>
@@ -412,7 +412,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message - 89" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Table contains no empty fields [&quot; + strStatusColumnName + &quot;='']&quot;]" />
+                      <ui:LogMessage DisplayName="Log Message - 90" sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Table contains no empty fields [&quot; + strStatusColumnName + &quot;='']&quot;]" />
                       <Assign DisplayName="Assign - boolAllStatusesCompleted" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="Assign_6">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Boolean">[boolAllStatusesCompleted]</OutArgument>
@@ -448,6 +448,6 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:LogMessage DisplayName="Log Message - 90" sap:VirtualizedContainerService.HintSize="504,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - Excel Get Table&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 91" sap:VirtualizedContainerService.HintSize="504,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - Excel Get Table&quot;]" />
   </Sequence>
 </Activity>

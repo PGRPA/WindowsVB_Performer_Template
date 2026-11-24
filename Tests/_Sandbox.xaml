@@ -136,7 +136,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="For Workflows testing." DisplayName="_Sandbox" sap:VirtualizedContainerService.HintSize="664.4000000000001,848" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="For Workflows testing." DisplayName="_Sandbox" sap:VirtualizedContainerService.HintSize="1002,849" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:QueueItem" Name="TransactionItem" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtTestTable" />
@@ -149,8 +149,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - 150" sap:VirtualizedContainerService.HintSize="649.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Start - _Sandbox&quot;]" />
-    <Sequence sap2010:Annotation.AnnotationText="Init Configs variables." DisplayName="Init Configs" sap:VirtualizedContainerService.HintSize="649.6,88" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <ui:LogMessage DisplayName="Log Message - 151" sap:VirtualizedContainerService.HintSize="650,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Start - _Sandbox&quot;]" />
+    <Sequence sap2010:Annotation.AnnotationText="Init Configs variables." DisplayName="Init Configs" sap:VirtualizedContainerService.HintSize="650,88" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="strConfigFilePath" />
         <Variable x:TypeArguments="ui:CurrentJobInfo" Name="objProcessInfoInit" />
@@ -164,7 +164,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:GetCurrentJobInfo DisplayName="Get Current Job Info - objProcessInfoInit" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="GetCurrentJobInfo_1" Result="[objProcessInfoInit]" />
-      <Assign DisplayName="Assign - strConfigFilePathLocal" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_6">
+      <Assign DisplayName="Assign - strConfigFilePathLocal" sap:VirtualizedContainerService.HintSize="616,175" sap2010:WorkflowViewState.IdRef="Assign_6">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[strConfigFilePathLocal]</OutArgument>
         </Assign.To>
@@ -172,7 +172,7 @@
           <InArgument x:TypeArguments="x:String">["Data\Config_Process_Name_Performer.xlsx"]</InArgument>
         </Assign.Value>
       </Assign>
-      <If Condition="[in_EnvironmentProd]" DisplayName="If - in_EnvironmentProd" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="If_1">
+      <If Condition="[in_EnvironmentProd]" DisplayName="If - in_EnvironmentProd" sap:VirtualizedContainerService.HintSize="616,57" sap2010:WorkflowViewState.IdRef="If_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -180,13 +180,13 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_16">
+          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="486,485" sap2010:WorkflowViewState.IdRef="Sequence_16">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" ContinueOnError="True" DisplayName="Retry Scope - Get Orchestrator Asset" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="2" RetryInterval="00:00:05">
+            <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" ContinueOnError="True" DisplayName="Retry Scope - Get Orchestrator Asset" sap:VirtualizedContainerService.HintSize="452,425" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="2" RetryInterval="00:00:05">
               <ui:RetryScope.ActivityBody>
                 <ActivityAction>
                   <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,227" sap2010:WorkflowViewState.IdRef="Sequence_15">
@@ -208,7 +208,7 @@
               </ui:RetryScope.Condition>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -216,7 +216,7 @@
           </Sequence>
         </If.Then>
         <If.Else>
-          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_17">
+          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="486,90" sap2010:WorkflowViewState.IdRef="Sequence_17">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -225,17 +225,17 @@
           </Sequence>
         </If.Else>
       </If>
-      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Framework\InitAllSettings.xaml - Init" sap:VirtualizedContainerService.HintSize="416,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Framework\InitAllSettings.xaml" sap:VirtualizedContainerService.HintSize="616,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">[If(String.IsNullOrEmpty(strConfigFilePath), strConfigFilePathLocal, strConfigFilePath)]</InArgument>
           <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[New String() {"Settings","Constants"}]</InArgument>
           <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[Config]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
-      <ui:LogMessage DisplayName="Log Message - 151" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Warn" Message="[If(Not String.IsNullOrEmpty(strConfigFilePath), &#xA; &quot;[PROD] Using orchestrator Config file path | &quot;, &#xA; &quot;[TEST] Using local Config file path | &quot;) + &#xA;(&quot;Connected to folder: &quot; + If(String.IsNullOrEmpty(objProcessInfoInit.FolderName), &#xA; &quot;[Current Workspace]&quot;, &#xA; objProcessInfoInit.FolderName.ToString())) + &#xA;If(String.IsNullOrEmpty(Config(&quot;OrchestratorQueueFolder&quot;).ToString()), &#xA; &quot;&quot;, &#xA; &quot; | Config(OrchestratorQueueFolder) set to: &quot; + Config(&quot;OrchestratorQueueFolder&quot;).ToString())]" />
-      <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Deserialize JSON - jsonConfig" sap:VirtualizedContainerService.HintSize="416,165" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jsonConfig]" JsonString="[Config(&quot;jsonTimeoutsExceptions&quot;).ToString()]" />
+      <ui:LogMessage DisplayName="Log Message - 152" sap:VirtualizedContainerService.HintSize="616,175" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Warn" Message="[If(Not String.IsNullOrEmpty(strConfigFilePath), &#xA; &quot;[PROD] Using orchestrator Config file path | &quot;, &#xA; &quot;[TEST] Using local Config file path | &quot;) + &#xA;(&quot;Connected to folder: &quot; + If(String.IsNullOrEmpty(objProcessInfoInit.FolderName), &#xA; &quot;[Current Workspace]&quot;, &#xA; objProcessInfoInit.FolderName.ToString())) + &#xA;If(String.IsNullOrEmpty(Config(&quot;OrchestratorQueueFolder&quot;).ToString()), &#xA; &quot;&quot;, &#xA; &quot; | Config(OrchestratorQueueFolder) set to: &quot; + Config(&quot;OrchestratorQueueFolder&quot;).ToString())]" />
+      <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Deserialize JSON - jsonConfig" sap:VirtualizedContainerService.HintSize="616,165" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jsonConfig]" JsonString="[Config(&quot;jsonTimeoutsExceptions&quot;).ToString()]" />
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Set QI and dtTest table for testing." DisplayName="TransactionItem &amp; dtTestTable" sap:VirtualizedContainerService.HintSize="649.6,88" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence sap2010:Annotation.AnnotationText="Set QI and dtTest table for testing." DisplayName="TransactionItem &amp; dtTestTable" sap:VirtualizedContainerService.HintSize="650,88" sap2010:WorkflowViewState.IdRef="Sequence_5">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -243,7 +243,7 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Assign DisplayName="Assign - TransactionItem" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign DisplayName="Assign - TransactionItem" sap:VirtualizedContainerService.HintSize="616,175" sap2010:WorkflowViewState.IdRef="Assign_3">
         <Assign.To>
           <OutArgument x:TypeArguments="ui:QueueItem">[TransactionItem]</OutArgument>
         </Assign.To>
@@ -253,7 +253,7 @@
 .SpecificContent = New Dictionary(Of String, Object) From {{"strMiasto", "Krakow"}, {"strID", "1234567890"}, {"strDataOd", "22.01.2025"}}}]</InArgument>
         </Assign.Value>
       </Assign>
-      <Assign DisplayName="Assign - dtTestTable" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign DisplayName="Assign - dtTestTable" sap:VirtualizedContainerService.HintSize="616,166" sap2010:WorkflowViewState.IdRef="Assign_4">
         <Assign.To>
           <OutArgument x:TypeArguments="sd:DataTable">[dtTestTable]</OutArgument>
         </Assign.To>
@@ -268,15 +268,15 @@
         </Assign.Value>
       </Assign>
     </Sequence>
-    <ui:CommentOut sap2010:Annotation.AnnotationText="Get, Set or Postpone provided QI." DisplayName="Comment Out - _GetSetPostponeQI" sap:VirtualizedContainerService.HintSize="649.6,88" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+    <ui:CommentOut sap2010:Annotation.AnnotationText="Get, Set or Postpone provided QI." DisplayName="Comment Out - _GetSetPostponeQI" sap:VirtualizedContainerService.HintSize="650,88" sap2010:WorkflowViewState.IdRef="CommentOut_4">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="_GetSetPostponeQI" sap:VirtualizedContainerService.HintSize="450,228" sap2010:WorkflowViewState.IdRef="Sequence_14">
+        <Sequence DisplayName="_GetSetPostponeQI" sap:VirtualizedContainerService.HintSize="650,228" sap2010:WorkflowViewState.IdRef="Sequence_14">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Tests\_GetSetPostponeQI.xaml" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Tests\_GetSetPostponeQI.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Tests\_GetSetPostponeQI.xaml" sap:VirtualizedContainerService.HintSize="616,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Tests\_GetSetPostponeQI.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:Int32" x:Key="intGet_1_Set_2_Postpone_3">1</InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="strOrchestratorQueueName">TestQueue</InArgument>
@@ -296,16 +296,16 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:CommentOut sap2010:Annotation.AnnotationText="BE &amp; AE throw activities." DisplayName="Comment Out - Exceptions" sap:VirtualizedContainerService.HintSize="649.6,88" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut sap2010:Annotation.AnnotationText="BE &amp; AE throw activities." DisplayName="Comment Out - Exceptions" sap:VirtualizedContainerService.HintSize="650,88" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="450,297" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="650,297" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Throw DisplayName="Throw - BE" Exception="[new BusinessRuleException(&quot;Some Business exception&quot;)]" sap:VirtualizedContainerService.HintSize="450,123" sap2010:WorkflowViewState.IdRef="Throw_1" />
-          <Throw DisplayName="Throw - AE" Exception="[new ApplicationException(&quot;Some Application exception&quot;)]" sap:VirtualizedContainerService.HintSize="450,123" sap2010:WorkflowViewState.IdRef="Throw_2" />
+          <Throw DisplayName="Throw - BE" Exception="[new BusinessRuleException(&quot;Some Business exception&quot;)]" sap:VirtualizedContainerService.HintSize="616,123" sap2010:WorkflowViewState.IdRef="Throw_1" />
+          <Throw DisplayName="Throw - AE" Exception="[new ApplicationException(&quot;Some Application exception&quot;)]" sap:VirtualizedContainerService.HintSize="616,114" sap2010:WorkflowViewState.IdRef="Throw_2" />
         </Sequence>
       </ui:CommentOut.Body>
       <sap:WorkflowViewStateService.ViewState>
@@ -316,18 +316,18 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:CommentOut sap2010:Annotation.AnnotationText="Get Login and Password from Orchestrator Credencials." DisplayName="Comment Out - Get Orchestrator Credencials" sap:VirtualizedContainerService.HintSize="649.6,101.6" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+    <ui:CommentOut sap2010:Annotation.AnnotationText="Get Login and Password from Orchestrator Credentials." DisplayName="Comment Out - Get Orchestrator Credentials" sap:VirtualizedContainerService.HintSize="650,102" sap2010:WorkflowViewState.IdRef="CommentOut_3">
       <ui:CommentOut.Body>
-        <Sequence sap2010:Annotation.AnnotationText="Get Login and Password from Orchestrator Credencials." DisplayName="Sequence" sap:VirtualizedContainerService.HintSize="450,433" sap2010:WorkflowViewState.IdRef="Sequence_13">
+        <Sequence sap2010:Annotation.AnnotationText="Get Login and Password from Orchestrator Credentials." DisplayName="Get Orchestrator Credentials" sap:VirtualizedContainerService.HintSize="650,56" sap2010:WorkflowViewState.IdRef="Sequence_13">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Robot1_OutlookCredentials" CacheStrategy="None" DisplayName="Get Credential - Orchestrator" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="450,176" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[sstrPass]" Username="[strLogin]" />
-          <ui:LogMessage DisplayName="Log Message - 152" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Warn" Message="[&quot;Login: &quot; + strLogin + Environment.NewLine + &quot;Pass: &quot; + (new System.Net.NetworkCredential(string.Empty, sstrPass).Password).ToString()]" />
+          <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="Robot1_OutlookCredentials" CacheStrategy="None" DisplayName="Get Credential - Orchestrator" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="616,176" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[sstrPass]" Username="[strLogin]" />
+          <ui:LogMessage DisplayName="Log Message - 153" sap:VirtualizedContainerService.HintSize="616,166" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Warn" Message="[&quot;Login: &quot; + strLogin + Environment.NewLine + &quot;Pass: &quot; + (new System.Net.NetworkCredential(string.Empty, sstrPass).Password).ToString()]" />
         </Sequence>
       </ui:CommentOut.Body>
       <sap:WorkflowViewStateService.ViewState>
@@ -338,6 +338,6 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:LogMessage DisplayName="Log Message - 153" sap:VirtualizedContainerService.HintSize="649.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Stop - _Sandbox&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 154" sap:VirtualizedContainerService.HintSize="650,166" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Stop - _Sandbox&quot;]" />
   </Sequence>
 </Activity>

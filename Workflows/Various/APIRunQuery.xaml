@@ -112,7 +112,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - 109" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - API Run Query&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 110" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - API Run Query&quot;]" />
     <Sequence sap2010:Annotation.AnnotationText="Run given query." DisplayName="Prepare &amp; Run API Call" sap:VirtualizedContainerService.HintSize="450,88" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="strAPIUser" />
@@ -673,8 +673,8 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:RetryScope>
-      <ui:LogMessage DisplayName="Log Message - 110" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[If(intAPIStatus = 200, &quot;Api call successful, status: &quot; + intAPIStatus.ToString(), &quot;Api call not successful, status: &quot; + intAPIStatus.ToString() + &quot;, response: &quot; + strAPIResult)]" />
+      <ui:LogMessage DisplayName="Log Message - 111" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[If(intAPIStatus = 200, &quot;Api call successful, status: &quot; + intAPIStatus.ToString(), &quot;Api call not successful, status: &quot; + intAPIStatus.ToString() + &quot;, response: &quot; + strAPIResult)]" />
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message - 111" sap:VirtualizedContainerService.HintSize="450,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - API Run Query&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 112" sap:VirtualizedContainerService.HintSize="450,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - API Run Query&quot;]" />
   </Sequence>
 </Activity>

@@ -151,7 +151,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - 72" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - Excel Add To Report&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 73" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - Excel Add To Report&quot;]" />
     <If sap2010:Annotation.AnnotationText="Outside Existing Excel report to be used?" Condition="[boolUseOutsideReport_3]" DisplayName="If - boolUseOutsideReport" sap:VirtualizedContainerService.HintSize="449.6,88" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -353,7 +353,7 @@ Substring(11, System.IO.Path.GetFileName(strTempExcelPath_123).ToString().Length
                                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:LogMessage DisplayName="Log Message - 73" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Creating Excel Report in: &quot; + strFolderForReport_12]" />
+                            <ui:LogMessage DisplayName="Log Message - 74" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Creating Excel Report in: &quot; + strFolderForReport_12]" />
                             <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[strReportPath]" DisplayName="Copy File - strReportPath" sap:VirtualizedContainerService.HintSize="416,224" sap2010:WorkflowViewState.IdRef="CopyFile_1" Path="[strTempExcelPath_123]" />
                             <ui:PathExists Resource="{x:Null}" DisplayName="Path Exists - boolReportPathExists - Copy File" Exists="[boolReportPathExists]" sap:VirtualizedContainerService.HintSize="416,165" sap2010:WorkflowViewState.IdRef="PathExists_3" Path="[strReportPath]" PathType="File" />
                           </Sequence>
@@ -374,7 +374,7 @@ Substring(11, System.IO.Path.GetFileName(strTempExcelPath_123).ToString().Length
                     </ui:RetryScope>
                   </If.Then>
                   <If.Else>
-                    <ui:LogMessage DisplayName="Log Message - 74" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Excel Report already exists in: &quot; + strFolderForReport_12]" />
+                    <ui:LogMessage DisplayName="Log Message - 75" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Trace" Message="[&quot;Excel Report already exists in: &quot; + strFolderForReport_12]" />
                   </If.Else>
                 </If>
               </Sequence>
@@ -511,7 +511,7 @@ Substring(11, System.IO.Path.GetFileName(strTempExcelPath_123).ToString().Length
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:LogMessage DisplayName="Log Message - 75" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Trace" Message="[&quot;Adding new row&quot;]" />
+        <ui:LogMessage DisplayName="Log Message - 76" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Trace" Message="[&quot;Adding new row&quot;]" />
         <Assign DisplayName="Assign - intExcelReportRowsCount" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_7">
           <Assign.To>
             <OutArgument x:TypeArguments="x:Int32">[intExcelReportRowsCount]</OutArgument>
@@ -590,7 +590,7 @@ Substring(11, System.IO.Path.GetFileName(strTempExcelPath_123).ToString().Length
                     <InArgument x:TypeArguments="x:Boolean">True</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:LogMessage DisplayName="Log Message - 76" sap:VirtualizedContainerService.HintSize="478,166" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Row number added: &quot; + (intExcelReportRowsCount + 2).ToString()]" />
+                <ui:LogMessage DisplayName="Log Message - 77" sap:VirtualizedContainerService.HintSize="478,166" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Row number added: &quot; + (intExcelReportRowsCount + 2).ToString()]" />
               </Sequence>
             </ActivityAction>
           </ui:RetryScope.ActivityBody>
@@ -621,7 +621,7 @@ Substring(11, System.IO.Path.GetFileName(strTempExcelPath_123).ToString().Length
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:LogMessage sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Log Message - 77" Level="Trace" Message="[&quot;Updating existing row&quot;]" />
+        <ui:LogMessage sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="Log Message - 78" Level="Trace" Message="[&quot;Updating existing row&quot;]" />
         <If sap2010:Annotation.AnnotationText="Cell address not provided?" Condition="[string.IsNullOrEmpty(strCellAddressToUpdate_2)]" DisplayName="If - string.IsNullOrEmpty(strCellAddressToUpdate_2)" sap:VirtualizedContainerService.HintSize="514,88" sap2010:WorkflowViewState.IdRef="If_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -802,7 +802,7 @@ Substring(11, System.IO.Path.GetFileName(strTempExcelPath_123).ToString().Length
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ueab:ExcelProcessScopeX>
-                <ui:LogMessage DisplayName="Log Message - 78" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Row number updated: &quot; + If(string.IsNullOrEmpty(strCellAddressToUpdate_2), (intRowToUpdate + 2).ToString(), (intRowToUpdate).ToString())]" />
+                <ui:LogMessage DisplayName="Log Message - 79" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Row number updated: &quot; + If(string.IsNullOrEmpty(strCellAddressToUpdate_2), (intRowToUpdate + 2).ToString(), (intRowToUpdate).ToString())]" />
               </Sequence>
             </ActivityAction>
           </ui:RetryScope.ActivityBody>
@@ -819,6 +819,6 @@ Substring(11, System.IO.Path.GetFileName(strTempExcelPath_123).ToString().Length
         </ui:RetryScope>
       </Sequence>
     </Switch>
-    <ui:LogMessage DisplayName="Log Message - 79" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - Excel Add To Report&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 80" sap:VirtualizedContainerService.HintSize="449.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - Excel Add To Report&quot;]" />
   </Sequence>
 </Activity>

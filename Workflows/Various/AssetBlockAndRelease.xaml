@@ -110,7 +110,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - 112" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - Asset Block And Release&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 113" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - Asset Block And Release&quot;]" />
     <Switch x:TypeArguments="x:Int32" DisplayName="Switch - intBlock_1_Release_2" Expression="[intBlock_1_Release_2]" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Switch`1_1">
       <Switch.Default>
         <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_2">
@@ -120,7 +120,7 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message - 113" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Error" Message="[&quot;Invalid value intBlock_1_Release_2: &quot; + intBlock_1_Release_2.ToString() + &quot;, provided. Please select 1 or 2.&quot;]" />
+          <ui:LogMessage DisplayName="Log Message - 114" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Error" Message="[&quot;Invalid value intBlock_1_Release_2: &quot; + intBlock_1_Release_2.ToString() + &quot;, provided. Please select 1 or 2.&quot;]" />
         </Sequence>
       </Switch.Default>
       <sap:WorkflowViewStateService.ViewState>
@@ -174,7 +174,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message - 114" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Blocking asset: &quot; + strAssetName]" />
+                      <ui:LogMessage DisplayName="Log Message - 115" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Blocking asset: &quot; + strAssetName]" />
                       <ui:SetAsset AssetName="[strAssetName]" DisplayName="Set Asset - strAssetBlockValue" FolderPath="[strOrchestratorFolder]" sap:VirtualizedContainerService.HintSize="416,228" sap2010:WorkflowViewState.IdRef="SetAsset_4" TimeoutMS="[intGetSetAssetTOms]" Value="[strAssetBlockValue]" />
                       <Assign DisplayName="Assign - boolAssetObtained" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_1">
                         <Assign.To>
@@ -194,7 +194,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message - 115" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Wait for asset release..&quot; + CurrentLoop.ToString()]" />
+                      <ui:LogMessage DisplayName="Log Message - 116" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Wait for asset release..&quot; + CurrentLoop.ToString()]" />
                       <Delay DisplayName="Delay - tsDelayBetweenLoops" Duration="[tsDelayBetweenLoops]" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Delay_1" />
                     </Sequence>
                   </If.Else>
@@ -266,7 +266,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message - 116" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Releasing asset: &quot; + strAssetName]" />
+              <ui:LogMessage DisplayName="Log Message - 117" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Releasing asset: &quot; + strAssetName]" />
               <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" DisplayName="Retry Scope - Set Asset - strAssetExpectedValue" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="[Int32.Parse(jsonConfig(&quot;RS&quot;)(&quot;OrchestratorGetSetActivities&quot;)(&quot;NR&quot;).ToString())]" RetryInterval="[TimeSpan.FromSeconds(Int32.Parse(jsonConfig(&quot;RS&quot;)(&quot;OrchestratorGetSetActivities&quot;)(&quot;TS&quot;).ToString()))]">
                 <ui:RetryScope.ActivityBody>
                   <ActivityAction>
@@ -299,12 +299,12 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message - 117" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Asset: &quot; + strAssetName + &quot;, cannot be released, it was not blocked by this Robot.&quot;]" />
+              <ui:LogMessage DisplayName="Log Message - 118" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Asset: &quot; + strAssetName + &quot;, cannot be released, it was not blocked by this Robot.&quot;]" />
             </Sequence>
           </If.Else>
         </If>
       </Sequence>
     </Switch>
-    <ui:LogMessage DisplayName="Log Message - 118" sap:VirtualizedContainerService.HintSize="450,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - Asset Block And Release&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 119" sap:VirtualizedContainerService.HintSize="450,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - Asset Block And Release&quot;]" />
   </Sequence>
 </Activity>

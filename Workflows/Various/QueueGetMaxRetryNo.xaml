@@ -117,7 +117,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message - 135" sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - Queue Get Max Retry No&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 136" sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Start - Queue Get Max Retry No&quot;]" />
     <ui:MultipleAssign DisplayName="Multiple Assign - strJsonPath" sap:VirtualizedContainerService.HintSize="478,211" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
@@ -171,7 +171,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:RetryScope>
-    <ui:LogMessage DisplayName="Log Message - 136" sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[If(intAPIStatus = 200, &quot;Api call successful, status: &quot; + intAPIStatus.ToString(), &quot;Api call not successful, status: &quot; + intAPIStatus.ToString() + &quot;, response: &quot; + strAPIResult)]" />
+    <ui:LogMessage DisplayName="Log Message - 137" sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[If(intAPIStatus = 200, &quot;Api call successful, status: &quot; + intAPIStatus.ToString(), &quot;Api call not successful, status: &quot; + intAPIStatus.ToString() + &quot;, response: &quot; + strAPIResult)]" />
     <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Deserialize JSON - objJsonResponse" sap:VirtualizedContainerService.HintSize="478,174" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[objJsonResponse]" JsonString="[strAPIResult]" />
     <Assign DisplayName="Assign - intMaxRetryNo" sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
@@ -181,7 +181,7 @@
         <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(objJsonResponse.SelectToken(strJsonPath))]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:LogMessage DisplayName="Log Message - 137" sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Queue [&quot; + strQueueName + &quot;] retry number is set to: &quot; + intMaxRetryNo.ToString()]" />
-    <ui:LogMessage DisplayName="Log Message - 138" sap:VirtualizedContainerService.HintSize="478,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - Queue Get Max Retry No&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - 138" sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Queue [&quot; + strQueueName + &quot;] retry number is set to: &quot; + intMaxRetryNo.ToString()]" />
+    <ui:LogMessage DisplayName="Log Message - 139" sap:VirtualizedContainerService.HintSize="478,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Stop - Queue Get Max Retry No&quot;]" />
   </Sequence>
 </Activity>
